@@ -1,5 +1,7 @@
+using GerenciadorDeFestas.Dominio.ModuloItem;
 using GerenciadorDeFestas.Infra.Dados.Arquivo.Compartilhado;
 using GerenciadorDeFestas.Infra.Dados.Arquivo.ModuloCliente;
+using GerenciadorDeFestas.Infra.Dados.Arquivo.ModuloItem;
 using GerenciadorDeFestas.WinForms.Compartilhado;
 using GerenciadorDeFestas.WinForms.ModuloAluguel;
 using GerenciadorDeFestas.WinForms.ModuloCliente;
@@ -17,6 +19,7 @@ namespace GerenciadorDeFestas.WinForms
 
         static ContextoDados contexto = new ContextoDados(carregarDados: true);
 
+        private IRepositorioItem repositorioItem = new RepositorioItemEmArquivo(contexto);
         //aqui vai os instanciamentos dos repositorios
 
         public TelaPrincipalForm()
@@ -87,35 +90,7 @@ namespace GerenciadorDeFestas.WinForms
             ConfigurarBotoesHabilitados(controlador);
         }
 
-        private void clientesMenuItem_Click(object sender, EventArgs e)
-        {
-            controlador = new ControladorCliente();
-
-            ConfigurarTelaPrincipal(controlador);
-        }
-
-        private void TemasMenuItem_Click(object sender, EventArgs e)
-        {
-            controlador = new ControladorTema();
-
-            ConfigurarTelaPrincipal(controlador);
-        }
-
-        private void ItensMenuItem_Click(object sender, EventArgs e)
-        {
-            controlador = new ControladorItem();
-
-            ConfigurarTelaPrincipal(controlador);
-        }
-
-        private void aluguelMenuItem_Click(object sender, EventArgs e)
-        {
-            controlador = new ControladorAluguel();
-
-            ConfigurarTelaPrincipal(controlador);
-        }
-
-        private void btnInserir_Click(object sender, EventArgs e)
+        private void btnInserir_Click_1(object sender, EventArgs e)
         {
             controlador.Inserir();
         }
@@ -133,6 +108,28 @@ namespace GerenciadorDeFestas.WinForms
         private void btnPagamento_Click(object sender, EventArgs e)
         {
             controlador.Pagamento();
+        }
+
+        private void clientesMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ItensMenuItem_Click_1(object sender, EventArgs e)
+        {
+            controlador = new ControladorItem(repositorioItem);
+
+            ConfigurarTelaPrincipal(controlador);
+        }
+
+        private void TemasMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aluguelMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

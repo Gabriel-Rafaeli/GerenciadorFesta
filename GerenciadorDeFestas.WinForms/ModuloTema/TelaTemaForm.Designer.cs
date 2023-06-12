@@ -28,62 +28,93 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtId = new TextBox();
-            label2 = new Label();
-            btnGravar = new Button();
-            btnCancelar = new Button();
-            SuspendLayout();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnGravar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.chListItens = new System.Windows.Forms.CheckedListBox();
+            this.txtTema = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // txtId
             // 
-            txtId.Location = new Point(368, 13);
-            txtId.Name = "txtId";
-            txtId.Size = new Size(28, 23);
-            txtId.TabIndex = 10;
-            txtId.Text = "0";
+            this.txtId.Location = new System.Drawing.Point(409, 14);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(28, 23);
+            this.txtId.TabIndex = 10;
+            this.txtId.Text = "0";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(342, 16);
-            label2.Name = "label2";
-            label2.Size = new Size(20, 15);
-            label2.TabIndex = 9;
-            label2.Text = "Id:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(383, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 15);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Id:";
             // 
             // btnGravar
             // 
-            btnGravar.DialogResult = DialogResult.OK;
-            btnGravar.Location = new Point(230, 137);
-            btnGravar.Name = "btnGravar";
-            btnGravar.Size = new Size(88, 41);
-            btnGravar.TabIndex = 8;
-            btnGravar.Text = "Gravar";
-            btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnGravar.Location = new System.Drawing.Point(255, 222);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(88, 41);
+            this.btnGravar.TabIndex = 8;
+            this.btnGravar.Text = "Gravar";
+            this.btnGravar.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            btnCancelar.DialogResult = DialogResult.Cancel;
-            btnCancelar.Location = new Point(324, 137);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(88, 41);
-            btnCancelar.TabIndex = 7;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.Location = new System.Drawing.Point(349, 222);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(88, 41);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // chListItens
+            // 
+            this.chListItens.FormattingEnabled = true;
+            this.chListItens.Location = new System.Drawing.Point(12, 52);
+            this.chListItens.Name = "chListItens";
+            this.chListItens.Size = new System.Drawing.Size(425, 148);
+            this.chListItens.TabIndex = 17;
+            // 
+            // txtTema
+            // 
+            this.txtTema.Location = new System.Drawing.Point(61, 14);
+            this.txtTema.Name = "txtTema";
+            this.txtTema.Size = new System.Drawing.Size(282, 23);
+            this.txtTema.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 15);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Tema:";
             // 
             // TelaTemaForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(424, 190);
-            Controls.Add(txtId);
-            Controls.Add(label2);
-            Controls.Add(btnGravar);
-            Controls.Add(btnCancelar);
-            Name = "TelaTemaForm";
-            Text = "TelaTemaForm";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(451, 281);
+            this.Controls.Add(this.chListItens);
+            this.Controls.Add(this.txtTema);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnGravar);
+            this.Controls.Add(this.btnCancelar);
+            this.Name = "TelaTemaForm";
+            this.Text = "TelaTemaForm";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -92,5 +123,8 @@
         private Label label2;
         private Button btnGravar;
         private Button btnCancelar;
+        private CheckedListBox chListItens;
+        private TextBox txtTema;
+        private Label label3;
     }
 }

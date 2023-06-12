@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="ModuloItem\ControladorItem.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GerenciadorDeFestas.Infra.Dados.Arquivo\GerenciadorDeFestas.Infra.Dados.Arquivo.csproj" />
   </ItemGroup>
 

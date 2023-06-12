@@ -53,7 +53,7 @@
             // 
             // menuBar
             // 
-            this.menuBar.BackColor = System.Drawing.Color.LightCyan;
+            this.menuBar.BackColor = System.Drawing.Color.LightSteelBlue;
             this.menuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem});
             this.menuBar.Location = new System.Drawing.Point(0, 0);
@@ -75,8 +75,9 @@
             // clientesMenuItem
             // 
             this.clientesMenuItem.Name = "clientesMenuItem";
-            this.clientesMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.clientesMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesMenuItem.Text = "Cliente";
+            this.clientesMenuItem.Click += new System.EventHandler(this.clientesMenuItem_Click);
             // 
             // TemasMenu
             // 
@@ -84,7 +85,7 @@
             this.ItensMenuItem,
             this.TemasMenuItem});
             this.TemasMenu.Name = "TemasMenu";
-            this.TemasMenu.Size = new System.Drawing.Size(115, 22);
+            this.TemasMenu.Size = new System.Drawing.Size(180, 22);
             this.TemasMenu.Text = "Temas";
             // 
             // ItensMenuItem
@@ -92,22 +93,25 @@
             this.ItensMenuItem.Name = "ItensMenuItem";
             this.ItensMenuItem.Size = new System.Drawing.Size(107, 22);
             this.ItensMenuItem.Text = "Itens";
+            this.ItensMenuItem.Click += new System.EventHandler(this.ItensMenuItem_Click_1);
             // 
             // TemasMenuItem
             // 
             this.TemasMenuItem.Name = "TemasMenuItem";
             this.TemasMenuItem.Size = new System.Drawing.Size(107, 22);
             this.TemasMenuItem.Text = "Temas";
+            this.TemasMenuItem.Click += new System.EventHandler(this.TemasMenuItem_Click);
             // 
             // aluguelMenuItem
             // 
             this.aluguelMenuItem.Name = "aluguelMenuItem";
-            this.aluguelMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.aluguelMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aluguelMenuItem.Text = "Aluguel";
+            this.aluguelMenuItem.Click += new System.EventHandler(this.aluguelMenuItem_Click);
             // 
             // toolBar
             // 
-            this.toolBar.BackColor = System.Drawing.Color.LightCyan;
+            this.toolBar.BackColor = System.Drawing.Color.LightSteelBlue;
             this.toolBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnInserir,
             this.btnEditar,
@@ -133,6 +137,7 @@
             this.btnInserir.Padding = new System.Windows.Forms.Padding(7);
             this.btnInserir.Size = new System.Drawing.Size(42, 42);
             this.btnInserir.Text = "toolStripButton1";
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click_1);
             // 
             // btnEditar
             // 
@@ -144,6 +149,7 @@
             this.btnEditar.Padding = new System.Windows.Forms.Padding(7);
             this.btnEditar.Size = new System.Drawing.Size(42, 42);
             this.btnEditar.Text = "toolStripButton2";
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -155,6 +161,7 @@
             this.btnExcluir.Padding = new System.Windows.Forms.Padding(7);
             this.btnExcluir.Size = new System.Drawing.Size(42, 42);
             this.btnExcluir.Text = "toolStripButton3";
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // toolStripSeparator1
             // 
@@ -171,6 +178,7 @@
             this.btnPagamento.Padding = new System.Windows.Forms.Padding(7);
             this.btnPagamento.Size = new System.Drawing.Size(42, 42);
             this.btnPagamento.Text = "toolStripButton4";
+            this.btnPagamento.Click += new System.EventHandler(this.btnPagamento_Click);
             // 
             // toolStripSeparator2
             // 
@@ -193,6 +201,7 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.Color.LightBlue;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.labelRodape});
             this.statusStrip1.Location = new System.Drawing.Point(0, 314);
@@ -218,6 +227,7 @@
             this.Controls.Add(this.menuBar);
             this.MainMenuStrip = this.menuBar;
             this.Name = "TelaPrincipalForm";
+            this.ShowIcon = false;
             this.Text = "Form1";
             this.menuBar.ResumeLayout(false);
             this.menuBar.PerformLayout();
