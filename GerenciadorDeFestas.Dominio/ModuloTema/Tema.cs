@@ -1,17 +1,54 @@
 ﻿using GerenciadorDeFestas.Dominio.Compartilhado;
+using GerenciadorDeFestas.Dominio.ModuloItem;
 
 namespace GerenciadorDeFestas.Dominio.ModuloTema
 {
+    [Serializable]
     public class Tema : EntidadeBase<Tema>
     {
+
+        public string Nome { get; set; }
+        public decimal ValorTotal { get; set; }
+
+        public List<Item> listaItens;
+
+        public Tema(string nome)
+        {
+            this.Nome = nome;
+            this.listaItens = new List<Item>();
+        }
+
+        public Tema()
+        {
+        }
+
         public override void AtualizarInformacoes(Tema registroAtualizado)
         {
-            throw new NotImplementedException();
+            this.Nome = registroAtualizado.Nome;
+            this.listaItens = registroAtualizado.listaItens;
+            this.ValorTotal = registroAtualizado.ValorTotal;
         }
 
         public override string[] Validar()
         {
-            throw new NotImplementedException();
+            List<string> erros = new();
+
+            if (listaItens.Count == 0)
+                erros.Add("É necessário incluir um Item.");
+
+            return erros.ToArray();
         }
+
+        public decimal CalcularValor()
+        {
+            foreach (Item item in listaItens)
+            {
+                ValorTotal += item.Valor;
+            }
+
+            return ValorTotal;
+        }
+
     }
 }
+
