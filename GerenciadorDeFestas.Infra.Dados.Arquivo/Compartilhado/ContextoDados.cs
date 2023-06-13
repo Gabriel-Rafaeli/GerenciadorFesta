@@ -3,6 +3,7 @@ using System.Text.Json;
 using GerenciadorDeFestas.Dominio.ModuloItem;
 using GerenciadorDeFestas.Dominio.ModuloCliente;
 using GerenciadorDeFestas.Dominio.ModuloTema;
+using GerenciadorDeFestas.Dominio.ModuloAluguel;
 
 namespace GerenciadorDeFestas.Infra.Dados.Arquivo.Compartilhado
 {
@@ -12,13 +13,14 @@ namespace GerenciadorDeFestas.Infra.Dados.Arquivo.Compartilhado
 
         public List<Item> listaItens;
         public List<Cliente> listaClientes;
-
+        public List<Aluguel> listaAlugueis;
         public List<Tema> listaTemas;
         public ContextoDados()
         {
             listaItens = new List<Item>();
             listaClientes = new List<Cliente>();
             listaTemas = new List<Tema>();
+            listaAlugueis = new List<Aluguel>();
         }
 
         public ContextoDados(bool carregarDados) : this()
@@ -50,6 +52,7 @@ namespace GerenciadorDeFestas.Infra.Dados.Arquivo.Compartilhado
                    this.listaItens = ctx.listaItens;
                    this.listaClientes = ctx.listaClientes;
                    this.listaTemas = ctx.listaTemas;
+                   this.listaAlugueis = ctx.listaAlugueis;
                 }
             }
         }

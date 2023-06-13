@@ -32,6 +32,10 @@
             label2 = new Label();
             btnGravar = new Button();
             btnCancelar = new Button();
+            lblPorcentagemPaga = new Label();
+            rbt40 = new RadioButton();
+            rbt50 = new RadioButton();
+            rbt100 = new RadioButton();
             SuspendLayout();
             // 
             // txtId
@@ -71,11 +75,57 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // lblPorcentagemPaga
+            // 
+            lblPorcentagemPaga.AutoSize = true;
+            lblPorcentagemPaga.Location = new Point(30, 20);
+            lblPorcentagemPaga.Name = "lblPorcentagemPaga";
+            lblPorcentagemPaga.Size = new Size(137, 15);
+            lblPorcentagemPaga.TabIndex = 11;
+            lblPorcentagemPaga.Text = "Porcentagem de Entrada";
+            // 
+            // rbt40
+            // 
+            rbt40.AutoSize = true;
+            rbt40.Location = new Point(36, 48);
+            rbt40.Name = "rbt40";
+            rbt40.Size = new Size(47, 19);
+            rbt40.TabIndex = 12;
+            rbt40.TabStop = true;
+            rbt40.Text = "40%";
+            rbt40.UseVisualStyleBackColor = true;
+            // 
+            // rbt50
+            // 
+            rbt50.AutoSize = true;
+            rbt50.Location = new Point(36, 73);
+            rbt50.Name = "rbt50";
+            rbt50.Size = new Size(47, 19);
+            rbt50.TabIndex = 13;
+            rbt50.TabStop = true;
+            rbt50.Text = "50%";
+            rbt50.UseVisualStyleBackColor = true;
+            // 
+            // rbt100
+            // 
+            rbt100.AutoSize = true;
+            rbt100.Location = new Point(36, 98);
+            rbt100.Name = "rbt100";
+            rbt100.Size = new Size(53, 19);
+            rbt100.TabIndex = 14;
+            rbt100.TabStop = true;
+            rbt100.Text = "100%";
+            rbt100.UseVisualStyleBackColor = true;
+            // 
             // TelaPagamentoForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(413, 236);
+            Controls.Add(rbt100);
+            Controls.Add(rbt50);
+            Controls.Add(rbt40);
+            Controls.Add(lblPorcentagemPaga);
             Controls.Add(txtId);
             Controls.Add(label2);
             Controls.Add(btnGravar);
@@ -92,5 +142,9 @@
         private Label label2;
         private Button btnGravar;
         private Button btnCancelar;
+        private Label lblPorcentagemPaga;
+        private RadioButton rbt40;
+        private RadioButton rbt50;
+        private RadioButton rbt100;
     }
 }

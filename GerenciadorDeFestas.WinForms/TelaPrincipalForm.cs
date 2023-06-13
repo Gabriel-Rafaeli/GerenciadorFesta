@@ -1,8 +1,12 @@
+using GerenciadorDeFestas.Dominio.ModuloAluguel;
 using GerenciadorDeFestas.Dominio.ModuloCliente;
 using GerenciadorDeFestas.Dominio.ModuloItem;
+using GerenciadorDeFestas.Dominio.ModuloTema;
 using GerenciadorDeFestas.Infra.Dados.Arquivo.Compartilhado;
+using GerenciadorDeFestas.Infra.Dados.Arquivo.ModuloAluguel;
 using GerenciadorDeFestas.Infra.Dados.Arquivo.ModuloCliente;
 using GerenciadorDeFestas.Infra.Dados.Arquivo.ModuloItem;
+using GerenciadorDeFestas.Infra.Dados.Arquivo.ModuloTema;
 using GerenciadorDeFestas.WinForms.Compartilhado;
 using GerenciadorDeFestas.WinForms.ModuloAluguel;
 using GerenciadorDeFestas.WinForms.ModuloCliente;
@@ -21,6 +25,8 @@ namespace GerenciadorDeFestas.WinForms
         static ContextoDados contexto = new ContextoDados(carregarDados: true);
 
         private IRepositorioItem repositorioItem = new RepositorioItemEmArquivo(contexto);
+        private IRepositorioTema repositorioTema = new RepositorioTemaEmArquivo(contexto);
+        private IRepositorioAluguel repositorioAluguel = new RepositorioAluguelEmArquivo(contexto);
         private IRepositorioCliente repositorioCliente = new RepositorioClienteEmArquivo(contexto);
         //aqui vai os instanciamentos dos repositorios
 
@@ -129,11 +135,16 @@ namespace GerenciadorDeFestas.WinForms
 
         private void TemasMenuItem_Click(object sender, EventArgs e)
         {
+            controlador = new ControladorTema(repositorioTema, repositorioItem);
 
+            ConfigurarTelaPrincipal(controlador);
         }
 
         private void aluguelMenuItem_Click(object sender, EventArgs e)
         {
+            controlador = new ControladorAluguel(repositorioCliente, repositorioTema, repositorioAluguel);
+
+            ConfigurarTelaPrincipal(controlador);
 
         }
     }
