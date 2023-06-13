@@ -1,6 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 using System.Text.Json;
 using GerenciadorDeFestas.Dominio.ModuloItem;
+using GerenciadorDeFestas.Dominio.ModuloCliente;
 using GerenciadorDeFestas.Dominio.ModuloTema;
 
 namespace GerenciadorDeFestas.Infra.Dados.Arquivo.Compartilhado
@@ -10,10 +11,13 @@ namespace GerenciadorDeFestas.Infra.Dados.Arquivo.Compartilhado
         private const string NOME_ARQUIVO = "Compartilhado\\GerenciadorFesta.json";
 
         public List<Item> listaItens;
+        public List<Cliente> listaClientes;
+
         public List<Tema> listaTemas;
         public ContextoDados()
         {
             listaItens = new List<Item>();
+            listaClientes = new List<Cliente>();
             listaTemas = new List<Tema>();
         }
 
@@ -44,6 +48,7 @@ namespace GerenciadorDeFestas.Infra.Dados.Arquivo.Compartilhado
                     ContextoDados ctx = JsonSerializer.Deserialize<ContextoDados>(registrosJson, config);
 
                    this.listaItens = ctx.listaItens;
+                   this.listaClientes = ctx.listaClientes;
                    this.listaTemas = ctx.listaTemas;
                 }
             }
