@@ -18,7 +18,7 @@ namespace GerenciadorDeFestas.Dominio.ModuloAluguel
         public string Cep { get; set; }
         public string Numero { get; set; }
         public string Rua { get; set; }
-        public PorcentagemPaga PorcentagemPaga { get; set; }
+        public PorcentagemPagaEnum PorcentagemPaga { get; set; }
         public decimal ValorPagar { get; set; }
 
         public Aluguel(Cliente cliente, Tema tema, DateTime data, DateTime horaInicio, DateTime horaFinal, DateTime dataFechamento, string cep, string numero, string rua)
@@ -85,6 +85,18 @@ namespace GerenciadorDeFestas.Dominio.ModuloAluguel
             valorRestante = valorRestante - (valorRestante * (decimal)PorcentagemPaga / 100);
 
             return valorRestante;
+        }
+        public void AtualizarPagamento(Aluguel aluguelAtualizado)
+        {
+            this.PorcentagemPaga = aluguelAtualizado.PorcentagemPaga;
+        }
+
+        public void FinalizarPagamento()
+        {
+            if (PorcentagemPaga == PorcentagemPagaEnum.Cem)
+            {
+                DataFechamento = DateTime.Now.Date;
+            }
         }
     }
 }

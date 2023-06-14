@@ -31,9 +31,25 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
             grid.Rows.Clear();
             foreach (Aluguel aluguel in alugueis)
             {
-                grid.Rows.Add(aluguel.id, aluguel.Cliente, aluguel.Tema, aluguel.Data, aluguel.DataFechamento, aluguel.Cep, aluguel.PorcentagemPaga, aluguel.ValorPagar);
+                grid.Rows.Add(aluguel.id, aluguel.Cliente, aluguel.Tema, aluguel.Data, aluguel.DataFechamento, aluguel.Cep, aluguel.PorcentagemPaga.ToString("D"), aluguel.ValorPagar);
             }
             TelaPrincipalForm.Instancia.AtualizarRodape($"Visualizando {alugueis.Count} Aluguel(is)");
+        }
+        
+        public int ObterIdSelecionado()
+        {
+            int id;
+
+            try
+            {
+                id = Convert.ToInt32(grid.SelectedRows[0].Cells["id"].Value);
+            }
+            catch
+            {
+                id = -1;
+            }
+
+            return id;
         }
 
         private void ConfigurarColunas()
@@ -83,22 +99,6 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
             };
 
             grid.Columns.AddRange(colunas);
-        }
-
-        public int ObterIdSelecionado()
-        {
-            int id;
-
-            try
-            {
-                id = Convert.ToInt32(grid.SelectedRows[0].Cells["id"].Value);
-            }
-            catch
-            {
-                id = -1;
-            }
-
-            return id;
         }
     }
 }

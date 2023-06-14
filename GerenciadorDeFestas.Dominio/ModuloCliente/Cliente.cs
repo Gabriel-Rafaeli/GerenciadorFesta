@@ -47,5 +47,10 @@ namespace GerenciadorDeFestas.Dominio.ModuloCliente
                    Nome == cliente.Nome &&
                    Telefone == cliente.Telefone;
         }
+
+        public override string ToString()
+        {
+            return Nome;
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GerenciadorDeFestas.Dominio.ModuloAluguel
 {
-    public enum PorcentagemPaga
+    public enum PorcentagemPagaEnum
     {
         Zero = 0, Quarenta = 40, Cinquenta = 50, Cem = 100
     }

@@ -32,6 +32,8 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
 
             aluguel.id = id;
 
+            aluguel.ValorPagar = tema.ValorTotal;
+
             return aluguel;
 
         }

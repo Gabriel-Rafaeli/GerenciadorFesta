@@ -112,7 +112,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloItem
 
         public override string ObterTipoCadastro()
         {
-            return "Cadastro de Categorias";
+            return "Cadastro de Itens";
         }
 
         private Item ObterItemSelecionado()
