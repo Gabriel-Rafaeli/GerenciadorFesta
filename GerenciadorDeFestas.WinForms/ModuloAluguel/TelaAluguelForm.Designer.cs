@@ -307,6 +307,7 @@
             Controls.Add(btnGravar);
             Controls.Add(btnCancelar);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "TelaAluguelForm";
             Text = "Cadastro de Alugueis";
             ResumeLayout(false);

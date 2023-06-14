@@ -43,6 +43,7 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.BackgroundImage = Properties.Resources.fundo2;
             btnCancelar.DialogResult = DialogResult.Cancel;
             btnCancelar.Location = new Point(350, 139);
             btnCancelar.Name = "btnCancelar";
@@ -53,6 +54,7 @@
             // 
             // btnGravar
             // 
+            btnGravar.BackgroundImage = Properties.Resources.Colorful_Modern_Geometric_Background_Desktop_Wallpaper__1_;
             btnGravar.DialogResult = DialogResult.OK;
             btnGravar.Location = new Point(256, 139);
             btnGravar.Name = "btnGravar";
