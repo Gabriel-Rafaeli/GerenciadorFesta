@@ -125,20 +125,29 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
             return repositorioAluguel.SelecionarPorId(id);
         }
 
-        public void Pagamento()
+        public override void Pagamento()
         {
             TelaPagamentoForm telaPagamento = new TelaPagamentoForm();
 
             Aluguel aluguelSelecionado = ObterAluguelSelecionado();
 
+            telaPagamento.ConfigurarValoresNaTela(aluguelSelecionado);
+
             DialogResult opcaoEscolhida = telaPagamento.ShowDialog();
 
-            if(opcaoEscolhida == DialogResult.OK)
+            if (opcaoEscolhida == DialogResult.OK)
             {
                 telaPagamento.PorcentagemEntrada(aluguelSelecionado);
-                aluguelSelecionado.CalcularSaldo();
-            }
 
-        }
+                aluguelSelecionado.ValorPagar = aluguelSelecionado.CalcularSaldo();
+
+                repositorioAluguel.AtualizarPagamentoJson(aluguelSelecionado.id, aluguelSelecionado);
+
+                aluguelSelecionado.FinalizarPagamento();
+
+                CarregarAlugueis();
+
+            }
+        }    
     }
 }

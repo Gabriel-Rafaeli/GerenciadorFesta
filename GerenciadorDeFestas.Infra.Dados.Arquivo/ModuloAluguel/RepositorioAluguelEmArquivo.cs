@@ -9,10 +9,15 @@ namespace GerenciadorDeFestas.Infra.Dados.Arquivo.ModuloAluguel
         public RepositorioAluguelEmArquivo(ContextoDados contexto) : base(contexto)
         {
         }
-
         protected override List<Aluguel> ObterRegistros()
         {
             return contextoDados.listaAlugueis;
+        }
+        public void AtualizarPagamentoJson(int id, Aluguel aluguelSelecionado)
+        {
+            aluguelSelecionado.AtualizarPagamento(SelecionarPorId(id));
+
+            contextoDados.GravarEmArquivoJson();
         }
     }
 }
