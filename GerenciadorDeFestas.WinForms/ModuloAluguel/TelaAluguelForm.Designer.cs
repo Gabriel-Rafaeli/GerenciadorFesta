@@ -54,7 +54,7 @@
             // 
             // txtId
             // 
-            txtId.Location = new Point(583, 12);
+            txtId.Location = new Point(540, 23);
             txtId.Name = "txtId";
             txtId.Size = new Size(28, 23);
             txtId.TabIndex = 10;
@@ -63,16 +63,20 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(557, 15);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            label2.ForeColor = Color.MidnightBlue;
+            label2.Location = new Point(504, 26);
             label2.Name = "label2";
-            label2.Size = new Size(20, 15);
+            label2.Size = new Size(23, 17);
             label2.TabIndex = 9;
             label2.Text = "Id:";
             // 
             // btnGravar
             // 
+            btnGravar.BackgroundImage = Properties.Resources.Colorful_Modern_Geometric_Background_Desktop_Wallpaper__1_;
             btnGravar.DialogResult = DialogResult.OK;
-            btnGravar.Location = new Point(429, 340);
+            btnGravar.Location = new Point(386, 227);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(88, 41);
             btnGravar.TabIndex = 8;
@@ -81,8 +85,9 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.BackgroundImage = Properties.Resources.fundo2;
             btnCancelar.DialogResult = DialogResult.Cancel;
-            btnCancelar.Location = new Point(523, 340);
+            btnCancelar.Location = new Point(480, 227);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(88, 41);
             btnCancelar.TabIndex = 7;
@@ -92,42 +97,54 @@
             // lblCliente
             // 
             lblCliente.AutoSize = true;
-            lblCliente.Location = new Point(69, 25);
+            lblCliente.BackColor = Color.Transparent;
+            lblCliente.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            lblCliente.ForeColor = Color.MidnightBlue;
+            lblCliente.Location = new Point(42, 29);
             lblCliente.Name = "lblCliente";
-            lblCliente.Size = new Size(47, 15);
+            lblCliente.Size = new Size(52, 17);
             lblCliente.TabIndex = 11;
             lblCliente.Text = "Cliente:";
             // 
             // lblTema
             // 
             lblTema.AutoSize = true;
-            lblTema.Location = new Point(78, 67);
+            lblTema.BackColor = Color.Transparent;
+            lblTema.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            lblTema.ForeColor = Color.MidnightBlue;
+            lblTema.Location = new Point(281, 30);
             lblTema.Name = "lblTema";
-            lblTema.Size = new Size(38, 15);
+            lblTema.Size = new Size(43, 17);
             lblTema.TabIndex = 13;
             lblTema.Text = "Tema:";
             // 
             // lblData
             // 
             lblData.AutoSize = true;
-            lblData.Location = new Point(82, 103);
+            lblData.BackColor = Color.Transparent;
+            lblData.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            lblData.ForeColor = Color.MidnightBlue;
+            lblData.Location = new Point(55, 75);
             lblData.Name = "lblData";
-            lblData.Size = new Size(34, 15);
+            lblData.Size = new Size(39, 17);
             lblData.TabIndex = 15;
             lblData.Text = "Data:";
             // 
             // lblHoraInicio
             // 
             lblHoraInicio.AutoSize = true;
-            lblHoraInicio.Location = new Point(48, 140);
+            lblHoraInicio.BackColor = Color.Transparent;
+            lblHoraInicio.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            lblHoraInicio.ForeColor = Color.MidnightBlue;
+            lblHoraInicio.Location = new Point(251, 76);
             lblHoraInicio.Name = "lblHoraInicio";
-            lblHoraInicio.Size = new Size(68, 15);
+            lblHoraInicio.Size = new Size(77, 17);
             lblHoraInicio.TabIndex = 17;
             lblHoraInicio.Text = "Hora Inicio:";
             // 
             // txtRua
             // 
-            txtRua.Location = new Point(122, 236);
+            txtRua.Location = new Point(105, 169);
             txtRua.Name = "txtRua";
             txtRua.Size = new Size(121, 23);
             txtRua.TabIndex = 20;
@@ -135,16 +152,19 @@
             // lblRua
             // 
             lblRua.AutoSize = true;
-            lblRua.Location = new Point(86, 239);
+            lblRua.BackColor = Color.Transparent;
+            lblRua.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            lblRua.ForeColor = Color.MidnightBlue;
+            lblRua.Location = new Point(59, 171);
             lblRua.Name = "lblRua";
-            lblRua.Size = new Size(30, 15);
+            lblRua.Size = new Size(34, 17);
             lblRua.TabIndex = 19;
             lblRua.Text = "Rua:";
             // 
             // cmbCliente
             // 
             cmbCliente.FormattingEnabled = true;
-            cmbCliente.Location = new Point(122, 22);
+            cmbCliente.Location = new Point(105, 26);
             cmbCliente.Name = "cmbCliente";
             cmbCliente.Size = new Size(121, 23);
             cmbCliente.TabIndex = 21;
@@ -152,7 +172,7 @@
             // cmbTema
             // 
             cmbTema.FormattingEnabled = true;
-            cmbTema.Location = new Point(122, 64);
+            cmbTema.Location = new Point(335, 27);
             cmbTema.Name = "cmbTema";
             cmbTema.Size = new Size(121, 23);
             cmbTema.TabIndex = 22;
@@ -160,39 +180,46 @@
             // dtpData
             // 
             dtpData.Format = DateTimePickerFormat.Short;
-            dtpData.Location = new Point(122, 103);
+            dtpData.Location = new Point(105, 72);
             dtpData.Name = "dtpData";
             dtpData.Size = new Size(121, 23);
             dtpData.TabIndex = 23;
+            dtpData.Value = new DateTime(2023, 6, 14, 14, 18, 52, 0);
             // 
             // dtpHoraInicio
             // 
-            dtpHoraInicio.Format = DateTimePickerFormat.Short;
-            dtpHoraInicio.Location = new Point(122, 134);
+            dtpHoraInicio.Format = DateTimePickerFormat.Time;
+            dtpHoraInicio.Location = new Point(335, 73);
             dtpHoraInicio.Name = "dtpHoraInicio";
             dtpHoraInicio.Size = new Size(121, 23);
             dtpHoraInicio.TabIndex = 24;
+            dtpHoraInicio.Value = new DateTime(2023, 6, 14, 0, 0, 0, 0);
             // 
             // dtpHoraFinal
             // 
-            dtpHoraFinal.Format = DateTimePickerFormat.Short;
-            dtpHoraFinal.Location = new Point(122, 163);
+            dtpHoraFinal.Format = DateTimePickerFormat.Time;
+            dtpHoraFinal.Location = new Point(335, 110);
             dtpHoraFinal.Name = "dtpHoraFinal";
             dtpHoraFinal.Size = new Size(121, 23);
             dtpHoraFinal.TabIndex = 26;
+            dtpHoraFinal.Tag = "";
+            dtpHoraFinal.Value = new DateTime(2023, 6, 14, 0, 0, 0, 0);
             // 
             // lblHoraFinal
             // 
             lblHoraFinal.AutoSize = true;
-            lblHoraFinal.Location = new Point(52, 169);
+            lblHoraFinal.BackColor = Color.Transparent;
+            lblHoraFinal.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            lblHoraFinal.ForeColor = Color.MidnightBlue;
+            lblHoraFinal.Location = new Point(255, 113);
             lblHoraFinal.Name = "lblHoraFinal";
-            lblHoraFinal.Size = new Size(64, 15);
+            lblHoraFinal.Size = new Size(73, 17);
             lblHoraFinal.TabIndex = 25;
             lblHoraFinal.Text = "Hora Final:";
             // 
             // txtCep
             // 
-            txtCep.Location = new Point(122, 265);
+            txtCep.Location = new Point(105, 198);
             txtCep.Name = "txtCep";
             txtCep.Size = new Size(121, 23);
             txtCep.TabIndex = 28;
@@ -200,15 +227,18 @@
             // lblCep
             // 
             lblCep.AutoSize = true;
-            lblCep.Location = new Point(85, 268);
+            lblCep.BackColor = Color.Transparent;
+            lblCep.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            lblCep.ForeColor = Color.MidnightBlue;
+            lblCep.Location = new Point(58, 200);
             lblCep.Name = "lblCep";
-            lblCep.Size = new Size(31, 15);
+            lblCep.Size = new Size(34, 17);
             lblCep.TabIndex = 27;
             lblCep.Text = "Cep:";
             // 
             // txtNumero
             // 
-            txtNumero.Location = new Point(122, 294);
+            txtNumero.Location = new Point(105, 227);
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(121, 23);
             txtNumero.TabIndex = 30;
@@ -216,34 +246,44 @@
             // lblNumero
             // 
             lblNumero.AutoSize = true;
-            lblNumero.Location = new Point(62, 297);
+            lblNumero.BackColor = Color.Transparent;
+            lblNumero.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            lblNumero.ForeColor = Color.MidnightBlue;
+            lblNumero.Location = new Point(35, 229);
             lblNumero.Name = "lblNumero";
-            lblNumero.Size = new Size(54, 15);
+            lblNumero.Size = new Size(61, 17);
             lblNumero.TabIndex = 29;
             lblNumero.Text = "Numero:";
             // 
             // dtpDataFechamento
             // 
             dtpDataFechamento.Format = DateTimePickerFormat.Short;
-            dtpDataFechamento.Location = new Point(122, 198);
+            dtpDataFechamento.Location = new Point(105, 109);
             dtpDataFechamento.Name = "dtpDataFechamento";
             dtpDataFechamento.Size = new Size(121, 23);
             dtpDataFechamento.TabIndex = 32;
+            dtpDataFechamento.Value = new DateTime(2023, 6, 14, 14, 19, 2, 0);
             // 
             // lblDataFechamento
             // 
             lblDataFechamento.AutoSize = true;
-            lblDataFechamento.Location = new Point(13, 204);
+            lblDataFechamento.BackColor = Color.Transparent;
+            lblDataFechamento.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            lblDataFechamento.ForeColor = Color.MidnightBlue;
+            lblDataFechamento.Location = new Point(13, 112);
             lblDataFechamento.Name = "lblDataFechamento";
-            lblDataFechamento.Size = new Size(103, 15);
+            lblDataFechamento.Size = new Size(85, 17);
             lblDataFechamento.TabIndex = 31;
-            lblDataFechamento.Text = "Data Fechamento:";
+            lblDataFechamento.Text = "Fechamento:";
             // 
             // TelaAluguelForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(623, 393);
+            BackColor = Color.AliceBlue;
+            BackgroundImage = Properties.Resources.fundo;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(581, 286);
             Controls.Add(dtpDataFechamento);
             Controls.Add(lblDataFechamento);
             Controls.Add(txtNumero);
@@ -266,8 +306,9 @@
             Controls.Add(label2);
             Controls.Add(btnGravar);
             Controls.Add(btnCancelar);
+            DoubleBuffered = true;
             Name = "TelaAluguelForm";
-            Text = "TelaAluguelForm";
+            Text = "Cadastro de Alugueis";
             ResumeLayout(false);
             PerformLayout();
         }

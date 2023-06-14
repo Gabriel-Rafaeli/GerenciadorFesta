@@ -28,103 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnGravar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtValor = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            txtId = new TextBox();
+            label2 = new Label();
+            btnGravar = new Button();
+            btnCancelar = new Button();
+            txtValor = new TextBox();
+            label1 = new Label();
+            txtNome = new TextBox();
+            lblNome = new Label();
+            SuspendLayout();
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(395, 38);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(28, 23);
-            this.txtId.TabIndex = 10;
-            this.txtId.Text = "0";
+            txtId.Location = new Point(395, 38);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(28, 23);
+            txtId.TabIndex = 10;
+            txtId.Text = "0";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(369, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 15);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Id:";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            label2.Location = new Point(369, 41);
+            label2.Name = "label2";
+            label2.Size = new Size(23, 17);
+            label2.TabIndex = 9;
+            label2.Text = "Id:";
             // 
             // btnGravar
             // 
-            this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnGravar.Location = new System.Drawing.Point(241, 140);
-            this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(88, 41);
-            this.btnGravar.TabIndex = 8;
-            this.btnGravar.Text = "Gravar";
-            this.btnGravar.UseVisualStyleBackColor = true;
+            btnGravar.BackgroundImage = Properties.Resources.Colorful_Modern_Geometric_Background_Desktop_Wallpaper__1_;
+            btnGravar.DialogResult = DialogResult.OK;
+            btnGravar.Location = new Point(241, 140);
+            btnGravar.Name = "btnGravar";
+            btnGravar.Size = new Size(88, 41);
+            btnGravar.TabIndex = 8;
+            btnGravar.Text = "Gravar";
+            btnGravar.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(335, 140);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(88, 41);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.BackgroundImage = Properties.Resources.fundo2;
+            btnCancelar.DialogResult = DialogResult.Cancel;
+            btnCancelar.Location = new Point(335, 140);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(88, 41);
+            btnCancelar.TabIndex = 7;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(65, 95);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(98, 23);
-            this.txtValor.TabIndex = 19;
+            txtValor.Location = new Point(65, 95);
+            txtValor.Name = "txtValor";
+            txtValor.Size = new Size(98, 23);
+            txtValor.TabIndex = 19;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 15);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Valor:";
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(16, 98);
+            label1.Name = "label1";
+            label1.Size = new Size(41, 17);
+            label1.TabIndex = 18;
+            label1.Text = "Valor:";
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(65, 38);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(282, 23);
-            this.txtNome.TabIndex = 17;
+            txtNome.Location = new Point(65, 38);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(282, 23);
+            txtNome.TabIndex = 17;
             // 
             // lblNome
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(16, 41);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(43, 15);
-            this.lblNome.TabIndex = 16;
-            this.lblNome.Text = "Nome:";
+            lblNome.AutoSize = true;
+            lblNome.BackColor = Color.Transparent;
+            lblNome.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            lblNome.Location = new Point(16, 41);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(48, 17);
+            lblNome.TabIndex = 16;
+            lblNome.Text = "Nome:";
             // 
             // TelaItemForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 193);
-            this.Controls.Add(this.txtValor);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnGravar);
-            this.Controls.Add(this.btnCancelar);
-            this.Name = "TelaItemForm";
-            this.Text = "TelaItemForm";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
+            BackgroundImage = Properties.Resources.fundo;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(435, 193);
+            Controls.Add(txtValor);
+            Controls.Add(label1);
+            Controls.Add(txtNome);
+            Controls.Add(lblNome);
+            Controls.Add(txtId);
+            Controls.Add(label2);
+            Controls.Add(btnGravar);
+            Controls.Add(btnCancelar);
+            DoubleBuffered = true;
+            Name = "TelaItemForm";
+            Text = "Cadastro de Itens";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

@@ -73,6 +73,26 @@ namespace GerenciadorDeFestas.WinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adicionar_ficheiro {
+            get {
+                object obj = ResourceManager.GetObject("adicionar-ficheiro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Colorful_Modern_Geometric_Background_Desktop_Wallpaper__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Colorful Modern Geometric Background Desktop Wallpaper (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_FILL0_wght400_GRAD0_opsz24 {
             get {
                 object obj = ResourceManager.GetObject("delete_FILL0_wght400_GRAD0_opsz24", resourceCulture);
@@ -86,6 +106,46 @@ namespace GerenciadorDeFestas.WinForms.Properties {
         internal static System.Drawing.Bitmap edit_FILL0_wght400_GRAD0_opsz24 {
             get {
                 object obj = ResourceManager.GetObject("edit_FILL0_wght400_GRAD0_opsz24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editar {
+            get {
+                object obj = ResourceManager.GetObject("editar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap excluir {
+            get {
+                object obj = ResourceManager.GetObject("excluir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundo {
+            get {
+                object obj = ResourceManager.GetObject("fundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundo2 {
+            get {
+                object obj = ResourceManager.GetObject("fundo2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

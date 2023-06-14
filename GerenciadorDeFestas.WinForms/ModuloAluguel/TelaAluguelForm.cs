@@ -40,7 +40,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
         {
             txtId.Text = aluguelSelecionado.id.ToString();
             cmbCliente.Text = aluguelSelecionado.Cliente.ToString();
-            cmbTema.Text = aluguelSelecionado.Tema.ToString(); 
+            cmbTema.Text = aluguelSelecionado.Tema.ToString();
             dtpData.Value = aluguelSelecionado.Data;
             dtpHoraInicio.Value = aluguelSelecionado.HoraInicio;
             dtpHoraFinal.Value = aluguelSelecionado.HoraFinal;

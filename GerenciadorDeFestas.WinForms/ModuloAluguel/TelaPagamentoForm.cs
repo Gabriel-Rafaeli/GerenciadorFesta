@@ -11,11 +11,11 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
 
         public Enum PorcentagemEntrada(Aluguel aluguelSelecionado)
         {
-            if(rbt40.Checked)
+            if (rbt40.Checked)
             {
                 return aluguelSelecionado.PorcentagemPaga = PorcentagemPaga.Quarenta;
             }
-            else if(rbt50.Checked) 
+            else if (rbt50.Checked)
             {
                 return aluguelSelecionado.PorcentagemPaga = PorcentagemPaga.Cinquenta;
             }

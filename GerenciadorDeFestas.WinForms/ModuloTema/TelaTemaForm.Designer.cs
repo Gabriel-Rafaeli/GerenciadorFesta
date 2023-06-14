@@ -48,15 +48,19 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             label2.Location = new Point(383, 17);
             label2.Name = "label2";
-            label2.Size = new Size(20, 15);
+            label2.Size = new Size(23, 17);
             label2.TabIndex = 9;
             label2.Text = "Id:";
             // 
             // btnGravar
             // 
+            btnGravar.BackgroundImage = Properties.Resources.Colorful_Modern_Geometric_Background_Desktop_Wallpaper__1_;
             btnGravar.DialogResult = DialogResult.OK;
+            btnGravar.ForeColor = SystemColors.ControlText;
             btnGravar.Location = new Point(255, 222);
             btnGravar.Name = "btnGravar";
             btnGravar.Size = new Size(88, 41);
@@ -66,6 +70,7 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.BackgroundImage = Properties.Resources.fundo2;
             btnCancelar.DialogResult = DialogResult.Cancel;
             btnCancelar.Location = new Point(349, 222);
             btnCancelar.Name = "btnCancelar";
@@ -92,9 +97,11 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             label3.Location = new Point(12, 17);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(43, 17);
             label3.TabIndex = 15;
             label3.Text = "Tema:";
             // 
@@ -102,6 +109,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
+            BackgroundImage = Properties.Resources.fundo;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(451, 281);
             Controls.Add(chListItens);
             Controls.Add(txtNome);
@@ -110,8 +120,9 @@
             Controls.Add(label2);
             Controls.Add(btnGravar);
             Controls.Add(btnCancelar);
+            DoubleBuffered = true;
             Name = "TelaTemaForm";
-            Text = "TelaTemaForm";
+            Text = "Cadastro de Temas";
             ResumeLayout(false);
             PerformLayout();
         }
