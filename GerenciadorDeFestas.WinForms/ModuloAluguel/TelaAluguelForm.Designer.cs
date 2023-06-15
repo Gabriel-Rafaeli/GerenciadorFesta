@@ -28,290 +28,295 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtId = new TextBox();
-            label2 = new Label();
-            btnGravar = new Button();
-            btnCancelar = new Button();
-            lblCliente = new Label();
-            lblTema = new Label();
-            lblData = new Label();
-            lblHoraInicio = new Label();
-            txtRua = new TextBox();
-            lblRua = new Label();
-            cmbCliente = new ComboBox();
-            cmbTema = new ComboBox();
-            dtpData = new DateTimePicker();
-            dtpHoraInicio = new DateTimePicker();
-            dtpHoraFinal = new DateTimePicker();
-            lblHoraFinal = new Label();
-            txtCep = new TextBox();
-            lblCep = new Label();
-            txtNumero = new TextBox();
-            lblNumero = new Label();
-            dtpDataFechamento = new DateTimePicker();
-            lblDataFechamento = new Label();
-            SuspendLayout();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnGravar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblCliente = new System.Windows.Forms.Label();
+            this.lblTema = new System.Windows.Forms.Label();
+            this.lblData = new System.Windows.Forms.Label();
+            this.lblHoraInicio = new System.Windows.Forms.Label();
+            this.txtRua = new System.Windows.Forms.TextBox();
+            this.lblRua = new System.Windows.Forms.Label();
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
+            this.cmbTema = new System.Windows.Forms.ComboBox();
+            this.dtpData = new System.Windows.Forms.DateTimePicker();
+            this.lblHoraFinal = new System.Windows.Forms.Label();
+            this.txtCep = new System.Windows.Forms.TextBox();
+            this.lblCep = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.dtpDataFechamento = new System.Windows.Forms.DateTimePicker();
+            this.lblDataFechamento = new System.Windows.Forms.Label();
+            this.dtpHoraInicio = new System.Windows.Forms.DateTimePicker();
+            this.dtpHoraFinal = new System.Windows.Forms.DateTimePicker();
+            this.SuspendLayout();
             // 
             // txtId
             // 
-            txtId.Location = new Point(540, 23);
-            txtId.Name = "txtId";
-            txtId.Size = new Size(28, 23);
-            txtId.TabIndex = 10;
-            txtId.Text = "0";
+            this.txtId.Location = new System.Drawing.Point(540, 23);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(28, 23);
+            this.txtId.TabIndex = 10;
+            this.txtId.Text = "0";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label2.ForeColor = Color.MidnightBlue;
-            label2.Location = new Point(504, 26);
-            label2.Name = "label2";
-            label2.Size = new Size(23, 17);
-            label2.TabIndex = 9;
-            label2.Text = "Id:";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.Location = new System.Drawing.Point(504, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Id:";
             // 
             // btnGravar
             // 
-            btnGravar.BackgroundImage = Properties.Resources.Colorful_Modern_Geometric_Background_Desktop_Wallpaper__1_;
-            btnGravar.DialogResult = DialogResult.OK;
-            btnGravar.Location = new Point(386, 227);
-            btnGravar.Name = "btnGravar";
-            btnGravar.Size = new Size(88, 41);
-            btnGravar.TabIndex = 8;
-            btnGravar.Text = "Gravar";
-            btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.BackgroundImage = global::GerenciadorDeFestas.WinForms.Properties.Resources.Colorful_Modern_Geometric_Background_Desktop_Wallpaper__1_;
+            this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnGravar.Location = new System.Drawing.Point(386, 227);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(88, 41);
+            this.btnGravar.TabIndex = 8;
+            this.btnGravar.Text = "Gravar";
+            this.btnGravar.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            btnCancelar.BackgroundImage = Properties.Resources.fundo2;
-            btnCancelar.DialogResult = DialogResult.Cancel;
-            btnCancelar.Location = new Point(480, 227);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(88, 41);
-            btnCancelar.TabIndex = 7;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.BackgroundImage = global::GerenciadorDeFestas.WinForms.Properties.Resources.fundo2;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.Location = new System.Drawing.Point(480, 227);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(88, 41);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // lblCliente
             // 
-            lblCliente.AutoSize = true;
-            lblCliente.BackColor = Color.Transparent;
-            lblCliente.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            lblCliente.ForeColor = Color.MidnightBlue;
-            lblCliente.Location = new Point(42, 29);
-            lblCliente.Name = "lblCliente";
-            lblCliente.Size = new Size(52, 17);
-            lblCliente.TabIndex = 11;
-            lblCliente.Text = "Cliente:";
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.BackColor = System.Drawing.Color.Transparent;
+            this.lblCliente.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblCliente.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblCliente.Location = new System.Drawing.Point(42, 29);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(52, 17);
+            this.lblCliente.TabIndex = 11;
+            this.lblCliente.Text = "Cliente:";
             // 
             // lblTema
             // 
-            lblTema.AutoSize = true;
-            lblTema.BackColor = Color.Transparent;
-            lblTema.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            lblTema.ForeColor = Color.MidnightBlue;
-            lblTema.Location = new Point(281, 30);
-            lblTema.Name = "lblTema";
-            lblTema.Size = new Size(43, 17);
-            lblTema.TabIndex = 13;
-            lblTema.Text = "Tema:";
+            this.lblTema.AutoSize = true;
+            this.lblTema.BackColor = System.Drawing.Color.Transparent;
+            this.lblTema.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblTema.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblTema.Location = new System.Drawing.Point(281, 30);
+            this.lblTema.Name = "lblTema";
+            this.lblTema.Size = new System.Drawing.Size(43, 17);
+            this.lblTema.TabIndex = 13;
+            this.lblTema.Text = "Tema:";
             // 
             // lblData
             // 
-            lblData.AutoSize = true;
-            lblData.BackColor = Color.Transparent;
-            lblData.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            lblData.ForeColor = Color.MidnightBlue;
-            lblData.Location = new Point(55, 75);
-            lblData.Name = "lblData";
-            lblData.Size = new Size(39, 17);
-            lblData.TabIndex = 15;
-            lblData.Text = "Data:";
+            this.lblData.AutoSize = true;
+            this.lblData.BackColor = System.Drawing.Color.Transparent;
+            this.lblData.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblData.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblData.Location = new System.Drawing.Point(55, 75);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(39, 17);
+            this.lblData.TabIndex = 15;
+            this.lblData.Text = "Data:";
             // 
             // lblHoraInicio
             // 
-            lblHoraInicio.AutoSize = true;
-            lblHoraInicio.BackColor = Color.Transparent;
-            lblHoraInicio.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            lblHoraInicio.ForeColor = Color.MidnightBlue;
-            lblHoraInicio.Location = new Point(251, 76);
-            lblHoraInicio.Name = "lblHoraInicio";
-            lblHoraInicio.Size = new Size(77, 17);
-            lblHoraInicio.TabIndex = 17;
-            lblHoraInicio.Text = "Hora Inicio:";
+            this.lblHoraInicio.AutoSize = true;
+            this.lblHoraInicio.BackColor = System.Drawing.Color.Transparent;
+            this.lblHoraInicio.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblHoraInicio.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblHoraInicio.Location = new System.Drawing.Point(251, 76);
+            this.lblHoraInicio.Name = "lblHoraInicio";
+            this.lblHoraInicio.Size = new System.Drawing.Size(77, 17);
+            this.lblHoraInicio.TabIndex = 17;
+            this.lblHoraInicio.Text = "Hora Inicio:";
             // 
             // txtRua
             // 
-            txtRua.Location = new Point(105, 169);
-            txtRua.Name = "txtRua";
-            txtRua.Size = new Size(121, 23);
-            txtRua.TabIndex = 20;
+            this.txtRua.Location = new System.Drawing.Point(105, 169);
+            this.txtRua.Name = "txtRua";
+            this.txtRua.Size = new System.Drawing.Size(121, 23);
+            this.txtRua.TabIndex = 20;
             // 
             // lblRua
             // 
-            lblRua.AutoSize = true;
-            lblRua.BackColor = Color.Transparent;
-            lblRua.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            lblRua.ForeColor = Color.MidnightBlue;
-            lblRua.Location = new Point(59, 171);
-            lblRua.Name = "lblRua";
-            lblRua.Size = new Size(34, 17);
-            lblRua.TabIndex = 19;
-            lblRua.Text = "Rua:";
+            this.lblRua.AutoSize = true;
+            this.lblRua.BackColor = System.Drawing.Color.Transparent;
+            this.lblRua.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblRua.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblRua.Location = new System.Drawing.Point(59, 171);
+            this.lblRua.Name = "lblRua";
+            this.lblRua.Size = new System.Drawing.Size(34, 17);
+            this.lblRua.TabIndex = 19;
+            this.lblRua.Text = "Rua:";
             // 
             // cmbCliente
             // 
-            cmbCliente.FormattingEnabled = true;
-            cmbCliente.Location = new Point(105, 26);
-            cmbCliente.Name = "cmbCliente";
-            cmbCliente.Size = new Size(121, 23);
-            cmbCliente.TabIndex = 21;
+            this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(105, 26);
+            this.cmbCliente.MaxDropDownItems = 12;
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(121, 23);
+            this.cmbCliente.TabIndex = 21;
             // 
             // cmbTema
             // 
-            cmbTema.FormattingEnabled = true;
-            cmbTema.Location = new Point(335, 27);
-            cmbTema.Name = "cmbTema";
-            cmbTema.Size = new Size(121, 23);
-            cmbTema.TabIndex = 22;
+            this.cmbTema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTema.FormattingEnabled = true;
+            this.cmbTema.Location = new System.Drawing.Point(335, 27);
+            this.cmbTema.Name = "cmbTema";
+            this.cmbTema.Size = new System.Drawing.Size(124, 23);
+            this.cmbTema.TabIndex = 22;
             // 
             // dtpData
             // 
-            dtpData.Format = DateTimePickerFormat.Short;
-            dtpData.Location = new Point(105, 72);
-            dtpData.Name = "dtpData";
-            dtpData.Size = new Size(121, 23);
-            dtpData.TabIndex = 23;
-            dtpData.Value = new DateTime(2023, 6, 14, 14, 18, 52, 0);
-            // 
-            // dtpHoraInicio
-            // 
-            dtpHoraInicio.Format = DateTimePickerFormat.Time;
-            dtpHoraInicio.Location = new Point(335, 73);
-            dtpHoraInicio.Name = "dtpHoraInicio";
-            dtpHoraInicio.Size = new Size(121, 23);
-            dtpHoraInicio.TabIndex = 24;
-            dtpHoraInicio.Value = new DateTime(2023, 6, 14, 0, 0, 0, 0);
-            // 
-            // dtpHoraFinal
-            // 
-            dtpHoraFinal.Format = DateTimePickerFormat.Time;
-            dtpHoraFinal.Location = new Point(335, 110);
-            dtpHoraFinal.Name = "dtpHoraFinal";
-            dtpHoraFinal.Size = new Size(121, 23);
-            dtpHoraFinal.TabIndex = 26;
-            dtpHoraFinal.Tag = "";
-            dtpHoraFinal.Value = new DateTime(2023, 6, 14, 0, 0, 0, 0);
+            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpData.Location = new System.Drawing.Point(105, 72);
+            this.dtpData.Name = "dtpData";
+            this.dtpData.Size = new System.Drawing.Size(121, 23);
+            this.dtpData.TabIndex = 23;
+            this.dtpData.Value = new System.DateTime(2023, 6, 14, 14, 18, 52, 0);
             // 
             // lblHoraFinal
             // 
-            lblHoraFinal.AutoSize = true;
-            lblHoraFinal.BackColor = Color.Transparent;
-            lblHoraFinal.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            lblHoraFinal.ForeColor = Color.MidnightBlue;
-            lblHoraFinal.Location = new Point(255, 113);
-            lblHoraFinal.Name = "lblHoraFinal";
-            lblHoraFinal.Size = new Size(73, 17);
-            lblHoraFinal.TabIndex = 25;
-            lblHoraFinal.Text = "Hora Final:";
+            this.lblHoraFinal.AutoSize = true;
+            this.lblHoraFinal.BackColor = System.Drawing.Color.Transparent;
+            this.lblHoraFinal.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblHoraFinal.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblHoraFinal.Location = new System.Drawing.Point(255, 113);
+            this.lblHoraFinal.Name = "lblHoraFinal";
+            this.lblHoraFinal.Size = new System.Drawing.Size(73, 17);
+            this.lblHoraFinal.TabIndex = 25;
+            this.lblHoraFinal.Text = "Hora Final:";
             // 
             // txtCep
             // 
-            txtCep.Location = new Point(105, 198);
-            txtCep.Name = "txtCep";
-            txtCep.Size = new Size(121, 23);
-            txtCep.TabIndex = 28;
+            this.txtCep.Location = new System.Drawing.Point(105, 198);
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(121, 23);
+            this.txtCep.TabIndex = 28;
             // 
             // lblCep
             // 
-            lblCep.AutoSize = true;
-            lblCep.BackColor = Color.Transparent;
-            lblCep.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            lblCep.ForeColor = Color.MidnightBlue;
-            lblCep.Location = new Point(58, 200);
-            lblCep.Name = "lblCep";
-            lblCep.Size = new Size(34, 17);
-            lblCep.TabIndex = 27;
-            lblCep.Text = "Cep:";
+            this.lblCep.AutoSize = true;
+            this.lblCep.BackColor = System.Drawing.Color.Transparent;
+            this.lblCep.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblCep.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblCep.Location = new System.Drawing.Point(58, 200);
+            this.lblCep.Name = "lblCep";
+            this.lblCep.Size = new System.Drawing.Size(34, 17);
+            this.lblCep.TabIndex = 27;
+            this.lblCep.Text = "Cep:";
             // 
             // txtNumero
             // 
-            txtNumero.Location = new Point(105, 227);
-            txtNumero.Name = "txtNumero";
-            txtNumero.Size = new Size(121, 23);
-            txtNumero.TabIndex = 30;
+            this.txtNumero.Location = new System.Drawing.Point(105, 227);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(121, 23);
+            this.txtNumero.TabIndex = 30;
             // 
             // lblNumero
             // 
-            lblNumero.AutoSize = true;
-            lblNumero.BackColor = Color.Transparent;
-            lblNumero.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            lblNumero.ForeColor = Color.MidnightBlue;
-            lblNumero.Location = new Point(35, 229);
-            lblNumero.Name = "lblNumero";
-            lblNumero.Size = new Size(61, 17);
-            lblNumero.TabIndex = 29;
-            lblNumero.Text = "Numero:";
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumero.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblNumero.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblNumero.Location = new System.Drawing.Point(35, 229);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(61, 17);
+            this.lblNumero.TabIndex = 29;
+            this.lblNumero.Text = "Numero:";
             // 
             // dtpDataFechamento
             // 
-            dtpDataFechamento.Format = DateTimePickerFormat.Short;
-            dtpDataFechamento.Location = new Point(105, 109);
-            dtpDataFechamento.Name = "dtpDataFechamento";
-            dtpDataFechamento.Size = new Size(121, 23);
-            dtpDataFechamento.TabIndex = 32;
-            dtpDataFechamento.Value = new DateTime(2023, 6, 14, 14, 19, 2, 0);
+            this.dtpDataFechamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataFechamento.Location = new System.Drawing.Point(105, 109);
+            this.dtpDataFechamento.Name = "dtpDataFechamento";
+            this.dtpDataFechamento.Size = new System.Drawing.Size(121, 23);
+            this.dtpDataFechamento.TabIndex = 32;
+            this.dtpDataFechamento.Value = new System.DateTime(2023, 6, 14, 14, 19, 2, 0);
             // 
             // lblDataFechamento
             // 
-            lblDataFechamento.AutoSize = true;
-            lblDataFechamento.BackColor = Color.Transparent;
-            lblDataFechamento.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            lblDataFechamento.ForeColor = Color.MidnightBlue;
-            lblDataFechamento.Location = new Point(13, 112);
-            lblDataFechamento.Name = "lblDataFechamento";
-            lblDataFechamento.Size = new Size(85, 17);
-            lblDataFechamento.TabIndex = 31;
-            lblDataFechamento.Text = "Fechamento:";
+            this.lblDataFechamento.AutoSize = true;
+            this.lblDataFechamento.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataFechamento.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblDataFechamento.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblDataFechamento.Location = new System.Drawing.Point(13, 112);
+            this.lblDataFechamento.Name = "lblDataFechamento";
+            this.lblDataFechamento.Size = new System.Drawing.Size(85, 17);
+            this.lblDataFechamento.TabIndex = 31;
+            this.lblDataFechamento.Text = "Fechamento:";
+            // 
+            // dtpHoraInicio
+            // 
+            this.dtpHoraInicio.CustomFormat = "HH:mm";
+            this.dtpHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHoraInicio.Location = new System.Drawing.Point(335, 72);
+            this.dtpHoraInicio.Name = "dtpHoraInicio";
+            this.dtpHoraInicio.ShowUpDown = true;
+            this.dtpHoraInicio.Size = new System.Drawing.Size(124, 23);
+            this.dtpHoraInicio.TabIndex = 33;
+            // 
+            // dtpHoraFinal
+            // 
+            this.dtpHoraFinal.CustomFormat = "HH:mm";
+            this.dtpHoraFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHoraFinal.Location = new System.Drawing.Point(334, 109);
+            this.dtpHoraFinal.Name = "dtpHoraFinal";
+            this.dtpHoraFinal.ShowUpDown = true;
+            this.dtpHoraFinal.Size = new System.Drawing.Size(125, 23);
+            this.dtpHoraFinal.TabIndex = 34;
             // 
             // TelaAluguelForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.AliceBlue;
-            BackgroundImage = Properties.Resources.fundo;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(581, 286);
-            Controls.Add(dtpDataFechamento);
-            Controls.Add(lblDataFechamento);
-            Controls.Add(txtNumero);
-            Controls.Add(lblNumero);
-            Controls.Add(txtCep);
-            Controls.Add(lblCep);
-            Controls.Add(dtpHoraFinal);
-            Controls.Add(lblHoraFinal);
-            Controls.Add(dtpHoraInicio);
-            Controls.Add(dtpData);
-            Controls.Add(cmbTema);
-            Controls.Add(cmbCliente);
-            Controls.Add(txtRua);
-            Controls.Add(lblRua);
-            Controls.Add(lblHoraInicio);
-            Controls.Add(lblData);
-            Controls.Add(lblTema);
-            Controls.Add(lblCliente);
-            Controls.Add(txtId);
-            Controls.Add(label2);
-            Controls.Add(btnGravar);
-            Controls.Add(btnCancelar);
-            DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            Name = "TelaAluguelForm";
-            Text = "Cadastro de Alugueis";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.BackgroundImage = global::GerenciadorDeFestas.WinForms.Properties.Resources.fundo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(581, 286);
+            this.Controls.Add(this.dtpHoraFinal);
+            this.Controls.Add(this.dtpHoraInicio);
+            this.Controls.Add(this.dtpDataFechamento);
+            this.Controls.Add(this.lblDataFechamento);
+            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.lblNumero);
+            this.Controls.Add(this.txtCep);
+            this.Controls.Add(this.lblCep);
+            this.Controls.Add(this.lblHoraFinal);
+            this.Controls.Add(this.dtpData);
+            this.Controls.Add(this.cmbTema);
+            this.Controls.Add(this.cmbCliente);
+            this.Controls.Add(this.txtRua);
+            this.Controls.Add(this.lblRua);
+            this.Controls.Add(this.lblHoraInicio);
+            this.Controls.Add(this.lblData);
+            this.Controls.Add(this.lblTema);
+            this.Controls.Add(this.lblCliente);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnGravar);
+            this.Controls.Add(this.btnCancelar);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "TelaAluguelForm";
+            this.Text = "Cadastro de Alugueis";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -329,8 +334,6 @@
         private ComboBox cmbCliente;
         private ComboBox cmbTema;
         private DateTimePicker dtpData;
-        private DateTimePicker dtpHoraInicio;
-        private DateTimePicker dtpHoraFinal;
         private Label lblHoraFinal;
         private TextBox txtCep;
         private Label lblCep;
@@ -338,5 +341,7 @@
         private Label lblNumero;
         private DateTimePicker dtpDataFechamento;
         private Label lblDataFechamento;
+        private DateTimePicker dtpHoraInicio;
+        private DateTimePicker dtpHoraFinal;
     }
 }

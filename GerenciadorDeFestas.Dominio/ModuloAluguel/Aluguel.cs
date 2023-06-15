@@ -61,10 +61,13 @@ namespace GerenciadorDeFestas.Dominio.ModuloAluguel
             List<string> erros = new List<string>();
 
             if (string.IsNullOrEmpty(Cep))
-                erros.Add("O campo 'nome' é obrigatório");
+                erros.Add("O campo 'Cep' é obrigatório");
 
             if (string.IsNullOrEmpty(Numero))
-                erros.Add("O campo 'telefone' é obrigatório");
+                erros.Add("O campo 'Numero' é obrigatório");
+
+            if (string.IsNullOrEmpty(Rua))
+                erros.Add("O campo 'Rua' é obrigatório");
 
             return erros.ToArray();
         }
