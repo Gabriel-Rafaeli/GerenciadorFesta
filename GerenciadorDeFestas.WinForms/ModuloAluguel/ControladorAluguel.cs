@@ -118,6 +118,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
             List<Aluguel> listaAlugueis = repositorioAluguel.SelecionarTodos();
             tabelaAluguel.AtualizarRegistros(listaAlugueis);
         }
+
         private Aluguel ObterAluguelSelecionado()
         {
             int id = tabelaAluguel.ObterIdSelecionado();
