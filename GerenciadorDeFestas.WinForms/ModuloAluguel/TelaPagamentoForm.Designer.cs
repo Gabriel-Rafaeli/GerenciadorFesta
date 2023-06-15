@@ -152,6 +152,7 @@
             Controls.Add(btnCancelar);
             DoubleBuffered = true;
             Name = "TelaPagamentoForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Pagamento";
             ResumeLayout(false);
             PerformLayout();

@@ -32,6 +32,21 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
 
             aluguel.id = id;
 
+            if (tema == null)
+            {
+                MessageBox.Show("É necessário selecionar um tema!");
+                DialogResult = DialogResult.None;
+                return null;
+            }
+
+
+            if (cliente == null)
+            {
+                MessageBox.Show("É necessário selecionar um cliente!");
+                DialogResult = DialogResult.None;
+                return null;
+            }
+
             aluguel.ValorPagar = tema.ValorTotal;
 
             return aluguel;
@@ -69,6 +84,8 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
 
         private void Validar(Aluguel aluguel)
         {
+            if (aluguel == null) return;
+
             string[] erros = aluguel.Validar();
 
             if (erros.Length > 0)
@@ -77,22 +94,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
 
                 DialogResult = DialogResult.None;
             }
-
-            else if (cmbCliente.SelectedIndex == -1)
-            {
-                TelaPrincipalForm.Instancia.AtualizarRodape( "Nenhum Cliente selecionado!");
-
-                DialogResult = DialogResult.None;
-            }
-
-            else if(cmbTema.SelectedIndex == -1)
-            {
-                TelaPrincipalForm.Instancia.AtualizarRodape("Nenhum Tema selecionado!");
-
-                DialogResult = DialogResult.None;
-            }
         }
-
         private void btnGravar_Click(object sender, EventArgs e)
         {
             Aluguel aluguel = ObterAluguel();

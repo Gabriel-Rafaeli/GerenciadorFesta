@@ -289,6 +289,7 @@
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "TelaAluguelForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro de Alugueis";
             ResumeLayout(false);
             PerformLayout();
