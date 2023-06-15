@@ -9,11 +9,14 @@ namespace GerenciadorDeFestas.Dominio.ModuloCliente
         public string Telefone { get; set; }
         public bool ClienteAntigo { get; set; }
 
-        public Cliente(string nome, string telefone, bool clienteAntigo)
+        public bool ClienteNovo { get; set; }
+
+        public Cliente(string nome, string telefone, bool clienteAntigo, bool clienteNovo)
         {
             this.Nome = nome;
             this.Telefone = telefone;
             this.ClienteAntigo = clienteAntigo;
+            this.ClienteNovo = clienteNovo;
         }
 
         public Cliente()
@@ -25,6 +28,7 @@ namespace GerenciadorDeFestas.Dominio.ModuloCliente
             this.Nome = registroAtualizado.Nome;
             this.Telefone = registroAtualizado.Telefone;
             this.ClienteAntigo = registroAtualizado.ClienteAntigo;
+            this.ClienteNovo = registroAtualizado.ClienteNovo;
         }
 
         public override string[] Validar()
@@ -36,6 +40,9 @@ namespace GerenciadorDeFestas.Dominio.ModuloCliente
 
             if (string.IsNullOrEmpty(Telefone))
                 erros.Add("O campo 'telefone' é obrigatório");
+
+            if (ClienteAntigo == false && ClienteNovo == false)
+                erros.Add("O campo cliente é obrigatório");
 
             return erros.ToArray();
         }

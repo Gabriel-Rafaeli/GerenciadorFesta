@@ -27,11 +27,11 @@ namespace GerenciadorDeFestas.Dominio.ModuloItem
         {
             List<string> erros = new();
 
-            if (Valor <= 0)
-                erros.Add("O valor precisa ser número positivo.");
-
-            else if (Nome == null)
+            if (string.IsNullOrEmpty(Nome))
                 erros.Add("É necessário incluir o nome do Item.");
+
+            else if (Valor <= 0)
+                erros.Add("O valor precisa ser número positivo.");
 
             return erros.ToArray();
         }

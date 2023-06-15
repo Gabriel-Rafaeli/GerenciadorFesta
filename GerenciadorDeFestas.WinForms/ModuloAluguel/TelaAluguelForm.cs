@@ -1,6 +1,7 @@
 ﻿using GerenciadorDeFestas.Dominio.ModuloAluguel;
 using GerenciadorDeFestas.Dominio.ModuloCliente;
 using GerenciadorDeFestas.Dominio.ModuloTema;
+using System.Drawing;
 
 namespace GerenciadorDeFestas.WinForms.ModuloAluguel
 {
@@ -23,19 +24,17 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
             DateTime data = dtpData.Value;
             DateTime horaInicio = dtpHoraInicio.Value;
             DateTime horaFinal = dtpHoraFinal.Value;
-            DateTime dataFechamento = dtpDataFechamento.Value;
             string cep = txtCep.Text;
             string rua = txtRua.Text;
             string numero = txtNumero.Text;
 
-            Aluguel aluguel = new Aluguel(cliente, tema, data, horaInicio, horaFinal, dataFechamento, cep, rua, numero);
+            Aluguel aluguel = new Aluguel(cliente, tema, data, horaInicio, horaFinal, cep, rua, numero);
 
             aluguel.id = id;
 
             aluguel.ValorPagar = tema.ValorTotal;
 
             return aluguel;
-
         }
 
         public void ConfigurarValoresNaTela(Aluguel aluguelSelecionado)
@@ -46,7 +45,6 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
             dtpData.Value = aluguelSelecionado.Data;
             dtpHoraInicio.Value = aluguelSelecionado.HoraInicio;
             dtpHoraFinal.Value = aluguelSelecionado.HoraFinal;
-            dtpDataFechamento.Value = aluguelSelecionado.DataFechamento;
             txtCep.Text = aluguelSelecionado.Cep;
             txtRua.Text = aluguelSelecionado.Rua;
             txtNumero.Text = aluguelSelecionado.Numero;
@@ -67,6 +65,39 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
             {
                 cmbTema.Items.Add(tema);
             }
+        }
+
+        private void Validar(Aluguel aluguel)
+        {
+            string[] erros = aluguel.Validar();
+
+            if (erros.Length > 0)
+            {
+                TelaPrincipalForm.Instancia.AtualizarRodape(erros[0]);
+
+                DialogResult = DialogResult.None;
+            }
+
+            else if (cmbCliente.SelectedIndex == -1)
+            {
+                TelaPrincipalForm.Instancia.AtualizarRodape( "Nenhum Cliente selecionado!");
+
+                DialogResult = DialogResult.None;
+            }
+
+            else if(cmbTema.SelectedIndex == -1)
+            {
+                TelaPrincipalForm.Instancia.AtualizarRodape("Nenhum Tema selecionado!");
+
+                DialogResult = DialogResult.None;
+            }
+        }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            Aluguel aluguel = ObterAluguel();
+
+            Validar(aluguel);
         }
     }
 }

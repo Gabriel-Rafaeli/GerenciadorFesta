@@ -19,9 +19,10 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
             int id = Convert.ToInt32(txtId.Text);
             string nome = txtNome.Text;
             string telefone = txtTelefone.Text;
-            bool tipoCliente = rdbAntigo.Checked;
+            bool ClienteAntigo = rdbAntigo.Checked;
+            bool ClienteNovo = rdbNovo.Checked;
 
-            cliente = new Cliente(nome, telefone, tipoCliente);
+            cliente = new Cliente(nome, telefone, ClienteAntigo, ClienteNovo);
             cliente.id = id;
 
             return cliente;
@@ -32,6 +33,30 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
             txtId.Text = clienteSelecionado.id.ToString();
             txtNome.Text = clienteSelecionado.Nome;
             txtTelefone.Text = clienteSelecionado.Telefone;
+
+            if (clienteSelecionado.ClienteAntigo)
+                rdbAntigo.Checked = true;
+            else
+                rdbNovo.Checked = true;
+        }
+
+        private void Validar(Cliente cliente)
+        {
+            string[] erros = cliente.Validar();
+
+            if (erros.Length > 0)
+            {
+                TelaPrincipalForm.Instancia.AtualizarRodape(erros[0]);
+
+                DialogResult = DialogResult.None;
+            }
+        }
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = ObterCliente();
+
+            Validar(cliente);
         }
     }
 }

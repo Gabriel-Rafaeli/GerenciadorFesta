@@ -36,7 +36,7 @@ namespace GerenciadorDeFestas.Dominio.ModuloTema
             if (listaItens.Count == 0)
                 erros.Add("É necessário incluir um Item.");
 
-            else if (Nome == null)
+            else if (string.IsNullOrEmpty(Nome))
                 erros.Add("É necessário incluir o nome do Tema.");
 
             return erros.ToArray();

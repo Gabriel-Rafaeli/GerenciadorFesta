@@ -31,7 +31,8 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
             grid.Rows.Clear();
             foreach (Aluguel aluguel in alugueis)
             {
-                grid.Rows.Add(aluguel.id, aluguel.Cliente, aluguel.Tema, aluguel.Data, aluguel.DataFechamento, aluguel.Cep, aluguel.PorcentagemPaga.ToString("D"), aluguel.ValorPagar);
+                grid.Rows.Add(aluguel.id, aluguel.Cliente, aluguel.Tema, aluguel.Data, aluguel.DataFechamento == new DateTime() ? "Em Aberto" :
+                        aluguel.DataFechamento.ToString("dd/MM/yyyy"), aluguel.Cep, aluguel.PorcentagemPaga.ToString("D"), aluguel.ValorPagar);
             }
             TelaPrincipalForm.Instancia.AtualizarRodape($"Visualizando {alugueis.Count} Aluguel(is)");
         }

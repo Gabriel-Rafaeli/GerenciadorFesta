@@ -55,7 +55,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloTema
             chListItens.Items.AddRange(itens.ToArray());
         }
 
-        public void VerificarErros(Tema tema)
+        private void Validar(Tema tema)
         {
             string[] erros = tema.Validar();
 
@@ -70,7 +70,8 @@ namespace GerenciadorDeFestas.WinForms.ModuloTema
         private void btnGravar_Click(object sender, EventArgs e)
         {
             Tema tema = ObterTema();
-            VerificarErros(tema);
+
+            Validar(tema);
         }
     }
 }

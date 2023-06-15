@@ -21,19 +21,16 @@ namespace GerenciadorDeFestas.Dominio.ModuloAluguel
         public PorcentagemPagaEnum PorcentagemPaga { get; set; }
         public decimal ValorPagar { get; set; }
 
-        public Aluguel(Cliente cliente, Tema tema, DateTime data, DateTime horaInicio, DateTime horaFinal, DateTime dataFechamento, string cep, string numero, string rua)
+        public Aluguel(Cliente cliente, Tema tema, DateTime data, DateTime horaInicio, DateTime horaFinal, string cep, string numero, string rua)
         {
             Cliente = cliente;
             Tema = tema;
             Data = data;
             HoraInicio = horaInicio;
             HoraFinal = horaFinal;
-            DataFechamento = dataFechamento;
             Cep = cep;
             Numero = numero;
-            Rua = rua;
-            
-            
+            Rua = rua;            
         }
 
         public Aluguel()
@@ -52,8 +49,7 @@ namespace GerenciadorDeFestas.Dominio.ModuloAluguel
             this.Numero = registroAtualizado.Numero;
             this.Rua = registroAtualizado.Rua;
             this.PorcentagemPaga = registroAtualizado.PorcentagemPaga;
-            this.ValorPagar = registroAtualizado.ValorPagar;
-            
+            this.ValorPagar = registroAtualizado.ValorPagar;            
         }
 
         public override string[] Validar()
@@ -68,6 +64,9 @@ namespace GerenciadorDeFestas.Dominio.ModuloAluguel
 
             if (string.IsNullOrEmpty(Rua))
                 erros.Add("O campo 'Rua' é obrigatório");
+
+            if (HoraInicio > HoraFinal)
+                erros.Add("A hora inicial não pode ser maior que a data final");
 
             return erros.ToArray();
         }
