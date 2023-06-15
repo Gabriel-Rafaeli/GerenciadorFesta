@@ -131,6 +131,16 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
 
             Aluguel aluguelSelecionado = ObterAluguelSelecionado();
 
+            if (aluguelSelecionado == null)
+            {
+                MessageBox.Show($"Selecione um aluguel primeiro!",
+                    "Edição de Aluguel",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+
+                return;
+            }
+
             telaPagamento.ConfigurarValoresNaTela(aluguelSelecionado);
 
             DialogResult opcaoEscolhida = telaPagamento.ShowDialog();

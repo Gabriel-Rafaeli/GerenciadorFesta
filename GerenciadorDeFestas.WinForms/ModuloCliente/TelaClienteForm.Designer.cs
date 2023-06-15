@@ -121,6 +121,8 @@
             txtId.Location = new Point(469, 28);
             txtId.Margin = new Padding(3, 4, 3, 4);
             txtId.Name = "txtId";
+            txtId.ReadOnly = true;
+            txtId.Size = new Size(28, 23);
             txtId.Size = new Size(31, 27);
             txtId.TabIndex = 6;
             txtId.Text = "0";

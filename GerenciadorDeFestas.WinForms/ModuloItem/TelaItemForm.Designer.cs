@@ -43,7 +43,8 @@
             txtId.Location = new Point(451, 51);
             txtId.Margin = new Padding(3, 4, 3, 4);
             txtId.Name = "txtId";
-            txtId.Size = new Size(31, 27);
+            txtId.ReadOnly = true;
+            txtId.Size = new Size(28, 23);
             txtId.TabIndex = 10;
             txtId.Text = "0";
             // 

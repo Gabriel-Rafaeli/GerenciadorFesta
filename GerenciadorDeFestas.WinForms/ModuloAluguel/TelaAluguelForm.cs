@@ -95,6 +95,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
                 DialogResult = DialogResult.None;
             }
         }
+
         private void btnGravar_Click(object sender, EventArgs e)
         {
             Aluguel aluguel = ObterAluguel();
