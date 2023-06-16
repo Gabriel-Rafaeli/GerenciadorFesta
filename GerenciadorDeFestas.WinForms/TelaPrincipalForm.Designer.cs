@@ -219,6 +219,7 @@
             MainMenuStrip = menuBar;
             Name = "TelaPrincipalForm";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Festas Infantis";
             menuBar.ResumeLayout(false);
             menuBar.PerformLayout();

@@ -36,6 +36,8 @@
             rbt40 = new RadioButton();
             rbt50 = new RadioButton();
             rbt100 = new RadioButton();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // txtId
@@ -61,7 +63,6 @@
             // 
             // btnGravar
             // 
-            btnGravar.BackgroundImage = Properties.Resources.Colorful_Modern_Geometric_Background_Desktop_Wallpaper__1_;
             btnGravar.DialogResult = DialogResult.OK;
             btnGravar.Location = new Point(169, 87);
             btnGravar.Name = "btnGravar";
@@ -72,7 +73,6 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.BackgroundImage = Properties.Resources.fundo2;
             btnCancelar.DialogResult = DialogResult.Cancel;
             btnCancelar.Location = new Point(263, 87);
             btnCancelar.Name = "btnCancelar";
@@ -135,14 +135,25 @@
             rbt100.Text = "100%";
             rbt100.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.Rodape;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Dock = DockStyle.Bottom;
+            pictureBox1.Location = new Point(0, 138);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(370, 5);
+            pictureBox1.TabIndex = 19;
+            pictureBox1.TabStop = false;
+            // 
             // TelaPagamentoForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.AliceBlue;
-            BackgroundImage = Properties.Resources.fundo;
+            BackColor = SystemColors.Control;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(370, 143);
+            Controls.Add(pictureBox1);
             Controls.Add(rbt100);
             Controls.Add(rbt50);
             Controls.Add(rbt40);
@@ -152,9 +163,11 @@
             Controls.Add(btnGravar);
             Controls.Add(btnCancelar);
             DoubleBuffered = true;
+            MaximizeBox = false;
             Name = "TelaPagamentoForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pagamento";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,5 +182,6 @@
         private RadioButton rbt40;
         private RadioButton rbt50;
         private RadioButton rbt100;
+        private PictureBox pictureBox1;
     }
 }

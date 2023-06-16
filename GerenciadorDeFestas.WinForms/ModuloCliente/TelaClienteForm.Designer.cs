@@ -39,28 +39,26 @@
             label4 = new Label();
             txtNome = new TextBox();
             txtTelefone = new TextBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnCancelar
             // 
-            btnCancelar.BackgroundImage = Properties.Resources.fundo2;
             btnCancelar.DialogResult = DialogResult.Cancel;
-            btnCancelar.Location = new Point(400, 185);
-            btnCancelar.Margin = new Padding(3, 4, 3, 4);
+            btnCancelar.Location = new Point(350, 139);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(101, 55);
+            btnCancelar.Size = new Size(88, 41);
             btnCancelar.TabIndex = 0;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnGravar
             // 
-            btnGravar.BackgroundImage = Properties.Resources.Colorful_Modern_Geometric_Background_Desktop_Wallpaper__1_;
             btnGravar.DialogResult = DialogResult.OK;
-            btnGravar.Location = new Point(293, 185);
-            btnGravar.Margin = new Padding(3, 4, 3, 4);
+            btnGravar.Location = new Point(256, 139);
             btnGravar.Name = "btnGravar";
-            btnGravar.Size = new Size(101, 55);
+            btnGravar.Size = new Size(88, 41);
             btnGravar.TabIndex = 1;
             btnGravar.Text = "Gravar";
             btnGravar.UseVisualStyleBackColor = true;
@@ -71,10 +69,9 @@
             rdbAntigo.AutoSize = true;
             rdbAntigo.BackColor = Color.Transparent;
             rdbAntigo.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            rdbAntigo.Location = new Point(307, 128);
-            rdbAntigo.Margin = new Padding(3, 4, 3, 4);
+            rdbAntigo.Location = new Point(269, 96);
             rdbAntigo.Name = "rdbAntigo";
-            rdbAntigo.Size = new Size(82, 27);
+            rdbAntigo.Size = new Size(67, 21);
             rdbAntigo.TabIndex = 2;
             rdbAntigo.TabStop = true;
             rdbAntigo.Text = "Antigo";
@@ -85,10 +82,9 @@
             rdbNovo.AutoSize = true;
             rdbNovo.BackColor = Color.Transparent;
             rdbNovo.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            rdbNovo.Location = new Point(228, 128);
-            rdbNovo.Margin = new Padding(3, 4, 3, 4);
+            rdbNovo.Location = new Point(200, 96);
             rdbNovo.Name = "rdbNovo";
-            rdbNovo.Size = new Size(73, 27);
+            rdbNovo.Size = new Size(59, 21);
             rdbNovo.TabIndex = 3;
             rdbNovo.TabStop = true;
             rdbNovo.Text = "Novo";
@@ -99,9 +95,9 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(22, 128);
+            label1.Location = new Point(19, 96);
             label1.Name = "label1";
-            label1.Size = new Size(200, 23);
+            label1.Size = new Size(158, 17);
             label1.TabIndex = 4;
             label1.Text = "Escolha o tipo de cliente:";
             // 
@@ -110,20 +106,18 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label2.Location = new Point(439, 32);
+            label2.Location = new Point(384, 24);
             label2.Name = "label2";
-            label2.Size = new Size(29, 23);
+            label2.Size = new Size(23, 17);
             label2.TabIndex = 5;
             label2.Text = "Id:";
             // 
             // txtId
             // 
-            txtId.Location = new Point(469, 28);
-            txtId.Margin = new Padding(3, 4, 3, 4);
+            txtId.Location = new Point(410, 21);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
             txtId.Size = new Size(28, 23);
-            txtId.Size = new Size(31, 27);
             txtId.TabIndex = 6;
             txtId.Text = "0";
             // 
@@ -132,9 +126,9 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label3.Location = new Point(34, 32);
+            label3.Location = new Point(30, 24);
             label3.Name = "label3";
-            label3.Size = new Size(61, 23);
+            label3.Size = new Size(48, 17);
             label3.TabIndex = 7;
             label3.Text = "Nome:";
             // 
@@ -143,36 +137,45 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label4.Location = new Point(22, 79);
+            label4.Location = new Point(19, 59);
             label4.Name = "label4";
-            label4.Size = new Size(78, 23);
+            label4.Size = new Size(61, 17);
             label4.TabIndex = 8;
             label4.Text = "Telefone:";
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(102, 28);
-            txtNome.Margin = new Padding(3, 4, 3, 4);
+            txtNome.Location = new Point(89, 21);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(322, 27);
+            txtNome.Size = new Size(282, 23);
             txtNome.TabIndex = 9;
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(102, 75);
-            txtTelefone.Margin = new Padding(3, 4, 3, 4);
+            txtTelefone.Location = new Point(89, 56);
             txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(143, 27);
+            txtTelefone.Size = new Size(126, 23);
             txtTelefone.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.Rodape;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Dock = DockStyle.Bottom;
+            pictureBox1.Location = new Point(0, 187);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(456, 5);
+            pictureBox1.TabIndex = 19;
+            pictureBox1.TabStop = false;
             // 
             // TelaClienteForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.AliceBlue;
-            BackgroundImage = Properties.Resources.fundo;
+            BackColor = SystemColors.Control;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(521, 256);
+            ClientSize = new Size(456, 192);
+            Controls.Add(pictureBox1);
             Controls.Add(txtTelefone);
             Controls.Add(txtNome);
             Controls.Add(label4);
@@ -185,10 +188,12 @@
             Controls.Add(btnGravar);
             Controls.Add(btnCancelar);
             DoubleBuffered = true;
-            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "TelaClienteForm";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro de Clientes";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -206,5 +211,6 @@
         private Label label4;
         private TextBox txtNome;
         private TextBox txtTelefone;
+        private PictureBox pictureBox1;
     }
 }

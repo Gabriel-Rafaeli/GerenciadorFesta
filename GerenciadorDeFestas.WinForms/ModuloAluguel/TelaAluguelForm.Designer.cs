@@ -48,6 +48,8 @@
             lblNumero = new Label();
             dtpHoraInicio = new DateTimePicker();
             dtpHoraFinal = new DateTimePicker();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // txtId
@@ -73,7 +75,6 @@
             // 
             // btnGravar
             // 
-            btnGravar.BackgroundImage = Properties.Resources.Colorful_Modern_Geometric_Background_Desktop_Wallpaper__1_;
             btnGravar.DialogResult = DialogResult.OK;
             btnGravar.Location = new Point(386, 227);
             btnGravar.Name = "btnGravar";
@@ -85,7 +86,6 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.BackgroundImage = Properties.Resources.fundo2;
             btnCancelar.DialogResult = DialogResult.Cancel;
             btnCancelar.Location = new Point(480, 227);
             btnCancelar.Name = "btnCancelar";
@@ -259,14 +259,25 @@
             dtpHoraFinal.Size = new Size(125, 23);
             dtpHoraFinal.TabIndex = 34;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.Rodape;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Dock = DockStyle.Bottom;
+            pictureBox1.Location = new Point(0, 281);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(581, 5);
+            pictureBox1.TabIndex = 35;
+            pictureBox1.TabStop = false;
+            // 
             // TelaAluguelForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.AliceBlue;
-            BackgroundImage = Properties.Resources.fundo;
+            BackColor = SystemColors.Control;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(581, 286);
+            Controls.Add(pictureBox1);
             Controls.Add(dtpHoraFinal);
             Controls.Add(dtpHoraInicio);
             Controls.Add(txtNumero);
@@ -289,10 +300,12 @@
             Controls.Add(btnCancelar);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MinimizeBox = false;
             Name = "TelaAluguelForm";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro de Alugueis";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -319,5 +332,6 @@
         private Label lblNumero;
         private DateTimePicker dtpHoraInicio;
         private DateTimePicker dtpHoraFinal;
+        private PictureBox pictureBox1;
     }
 }
