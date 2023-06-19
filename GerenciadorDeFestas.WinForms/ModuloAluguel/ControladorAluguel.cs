@@ -35,13 +35,18 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
         {
             TelaAluguelForm telaAluguel = new TelaAluguelForm(repositorioCliente.SelecionarTodos(), repositorioTema.SelecionarTodos());
             DialogResult opcaoEscolhida = telaAluguel.ShowDialog();
-            if(opcaoEscolhida == DialogResult.OK) 
-            {
-                Aluguel aluguel = telaAluguel.ObterAluguel();
-                repositorioAluguel.Inserir(aluguel);
-                CarregarAlugueis();
-            }
 
+            if (opcaoEscolhida == DialogResult.OK)
+            {
+                Aluguel aluguelSelecionado = telaAluguel.ObterAluguel();
+
+                aluguelSelecionado.CalcularValorPagar();
+
+                aluguelSelecionado.Cliente.listaAlugueisDoCliente.Add(aluguelSelecionado);
+
+                repositorioAluguel.Inserir(aluguelSelecionado);
+            }
+            CarregarAlugueis();
         }
 
         public override void Editar()
@@ -69,9 +74,10 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
 
                 repositorioAluguel.Editar(aluguel.id, aluguel);
 
-                CarregarAlugueis();
+                aluguel.CalcularValorPagar();
+                
             }
-
+            CarregarAlugueis();
         }
 
         public override void Excluir()
@@ -98,6 +104,45 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
                 CarregarAlugueis();
             }
         }
+
+        public override void Pagamento()
+        {
+            TelaPagamentoForm telaPagamento = new TelaPagamentoForm();
+
+            Aluguel aluguelSelecionado = ObterAluguelSelecionado();
+
+            if (aluguelSelecionado == null)
+            {
+                MessageBox.Show($"Selecione um aluguel primeiro!",
+                    "Edição de Aluguel",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+
+                return;
+            }
+
+            if (BloquearBotaoPagamento(aluguelSelecionado))
+                return;
+
+            telaPagamento.ConfigurarValoresNaTela(aluguelSelecionado);
+
+            DialogResult opcaoEscolhida = telaPagamento.ShowDialog();
+
+            if (opcaoEscolhida == DialogResult.OK)
+            {
+                telaPagamento.PorcentagemEntrada(aluguelSelecionado);
+
+                aluguelSelecionado.ValorPagar = aluguelSelecionado.CalcularValorPagar();
+
+                
+
+                repositorioAluguel.AtualizarPagamentoJson(aluguelSelecionado.id, aluguelSelecionado);
+
+                aluguelSelecionado.FinalizarPagamento();
+            }
+            
+            CarregarAlugueis();
+        }    
 
         public override UserControl ObterListagem()
         {
@@ -127,39 +172,18 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
             return repositorioAluguel.SelecionarPorId(id);
         }
 
-        public override void Pagamento()
+        private bool BloquearBotaoPagamento(Aluguel aluguel)
         {
-            TelaPagamentoForm telaPagamento = new TelaPagamentoForm();
-
-            Aluguel aluguelSelecionado = ObterAluguelSelecionado();
-
-            if (aluguelSelecionado == null)
+            if(aluguel.PorcentagemPaga == PorcentagemPagaEnum.Cem) 
             {
-                MessageBox.Show($"Selecione um aluguel primeiro!",
-                    "Edição de Aluguel",
+                MessageBox.Show($"Pagamento já finalizado!",
+                    "Pagamento",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
-
-                return;
+                return true;
             }
 
-            telaPagamento.ConfigurarValoresNaTela(aluguelSelecionado);
-
-            DialogResult opcaoEscolhida = telaPagamento.ShowDialog();
-
-            if (opcaoEscolhida == DialogResult.OK)
-            {
-                telaPagamento.PorcentagemEntrada(aluguelSelecionado);
-
-                aluguelSelecionado.ValorPagar = aluguelSelecionado.CalcularValorPagar();
-
-                repositorioAluguel.AtualizarPagamentoJson(aluguelSelecionado.id, aluguelSelecionado);
-
-                aluguelSelecionado.FinalizarPagamento();
-
-                CarregarAlugueis();
-
-            }
-        }    
+            return false;
+        }
     }
 }

@@ -62,9 +62,8 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
                 Cliente cliente = telaCliente.ObterCliente();
 
                 repositorioCliente.Editar(cliente.id, cliente);
-
-                CarregarClientes();
             }
+            CarregarClientes();
         }
 
         public override void Excluir()
@@ -86,12 +85,21 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
 
             if (opcaoEscolhida == DialogResult.OK)
             {
-                repositorioCliente.Excluir(cliente);
+                if (cliente.listaAlugueisDoCliente.Count() > 0)
+                {
+                    MessageBox.Show("Exclusão inválida! Cliente possui aluguel(éis)", "Excluir cliente existente",
+                        MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
 
-                CarregarClientes();
+                repositorioCliente.Excluir(cliente);
             }
+
+            CarregarClientes();
         }
 
+       
+        
         public override void Listar()
         {
             Cliente cliente = ObterClienteSelecionado();

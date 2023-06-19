@@ -31,7 +31,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
             Aluguel aluguel = new Aluguel(cliente, tema, data, horaInicio, horaFinal, cep, rua, numero);
 
             aluguel.id = id;
-
+            
             if (tema == null)
             {
                 MessageBox.Show("É necessário selecionar um tema!");
@@ -39,6 +39,8 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
                 return null;
             }
 
+            aluguel.ValorTotal = tema.ValorTotal;
+            aluguel.ValorPagar = tema.ValorTotal;
 
             if (cliente == null)
             {
@@ -47,7 +49,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
                 return null;
             }
 
-            aluguel.ValorPagar = tema.ValorTotal;
+            
 
             return aluguel;
         }
