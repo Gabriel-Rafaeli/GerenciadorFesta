@@ -79,6 +79,7 @@ namespace GerenciadorDeFestas.WinForms
             btnEditar.Enabled = controlador.EditarHabilitado;
             btnExcluir.Enabled = controlador.ExcluirHabilitado;
             btnPagamento.Enabled = controlador.PagamentoHabilitado;
+            btnListagem.Enabled = controlador.ListagemHabilitado;
         }
 
         private void ConfigurarToolTips(ControladorBase controlador)
@@ -146,6 +147,11 @@ namespace GerenciadorDeFestas.WinForms
 
             ConfigurarTelaPrincipal(controlador);
 
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            controlador.Listar();
         }
     }
 }

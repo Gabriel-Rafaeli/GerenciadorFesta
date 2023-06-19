@@ -5,7 +5,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
 {
     public class ControladorCliente : ControladorBase
     {
-
+        private TabelaListagemAlugueisControl tabelaListagem;
         private IRepositorioCliente repositorioCliente;
         private TabelaClienteControl tabelaCliente;
 
@@ -19,6 +19,8 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
         public override string ToolTipEditar { get { return "Editar Cliente existente"; } }
 
         public override string ToolTipExcluir { get { return "Excluir Cliente existente"; } }
+
+        public override bool ListagemHabilitado => true;
 
         public override void Inserir()
         {
@@ -88,6 +90,33 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
 
                 CarregarClientes();
             }
+        }
+
+        public override void Listar()
+        {
+            Cliente cliente = ObterClienteSelecionado();
+
+            TelaListagemAlugueisForm telaListagemAlugueis = new TelaListagemAlugueisForm();
+            telaListagemAlugueis.Text = "Listagem de aluguéis do cliente";
+
+            if (tabelaListagem == null)
+                tabelaListagem = new TabelaListagemAlugueisControl();
+
+            if (cliente == null)
+            {
+                MessageBox.Show($"Selecione um cliente primeiro!",
+                    "Listagem de aluguéis do cliente",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+
+                return;
+            }
+
+            telaListagemAlugueis.SetarNome(cliente);
+
+            telaListagemAlugueis.CarregarRegistros(cliente.listaAlugueisDoCliente);
+
+            telaListagemAlugueis.ShowDialog();
         }
 
         private Cliente ObterClienteSelecionado()

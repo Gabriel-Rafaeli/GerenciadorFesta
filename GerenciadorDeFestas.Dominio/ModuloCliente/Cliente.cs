@@ -1,22 +1,21 @@
 ﻿using GerenciadorDeFestas.Dominio.Compartilhado;
+using GerenciadorDeFestas.Dominio.ModuloAluguel;
+using System.Text.RegularExpressions;
 
 namespace GerenciadorDeFestas.Dominio.ModuloCliente
 {
     [Serializable]
     public class Cliente : EntidadeBase<Cliente>
     {
+        public List<Aluguel> listaAlugueisDoCliente;
         public string Nome { get; set; }
         public string Telefone { get; set; }
-        public bool ClienteAntigo { get; set; }
 
-        public bool ClienteNovo { get; set; }
-
-        public Cliente(string nome, string telefone, bool clienteAntigo, bool clienteNovo)
+        public Cliente(string nome, string telefone)
         {
             this.Nome = nome;
             this.Telefone = telefone;
-            this.ClienteAntigo = clienteAntigo;
-            this.ClienteNovo = clienteNovo;
+            this.listaAlugueisDoCliente = new List<Aluguel>();
         }
 
         public Cliente()
@@ -27,8 +26,6 @@ namespace GerenciadorDeFestas.Dominio.ModuloCliente
         {
             this.Nome = registroAtualizado.Nome;
             this.Telefone = registroAtualizado.Telefone;
-            this.ClienteAntigo = registroAtualizado.ClienteAntigo;
-            this.ClienteNovo = registroAtualizado.ClienteNovo;
         }
 
         public override string[] Validar()
@@ -38,11 +35,16 @@ namespace GerenciadorDeFestas.Dominio.ModuloCliente
             if (string.IsNullOrEmpty(Nome))
                 erros.Add("O campo 'nome' é obrigatório");
 
-            if (string.IsNullOrEmpty(Telefone))
+            string digitos = Regex.Replace(Telefone, "[^0-9]", "");
+
+            if (string.IsNullOrEmpty(digitos))
                 erros.Add("O campo 'telefone' é obrigatório");
 
-            if (ClienteAntigo == false && ClienteNovo == false)
-                erros.Add("O campo cliente é obrigatório");
+            if (Telefone.Length <= 14)
+                erros.Add("O campo 'telefone' é obrigatório");
+
+            if (Nome.Length < 5)
+                erros.Add("O campo 'nome' deve ter no mínimo 5 caracteres");
 
             return erros.ToArray();
         }

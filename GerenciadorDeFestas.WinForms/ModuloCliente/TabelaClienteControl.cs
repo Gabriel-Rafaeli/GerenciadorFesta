@@ -21,7 +21,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
             grid.Rows.Clear();
             foreach (Cliente cliente in clientes)
             {
-                grid.Rows.Add(cliente.id, cliente.Nome, cliente.Telefone, cliente.ClienteAntigo);
+                grid.Rows.Add(cliente.id, cliente.Nome, cliente.Telefone);
             }
             TelaPrincipalForm.Instancia.AtualizarRodape($"Visualizando {clientes.Count} cliente(s)");
         }

@@ -19,10 +19,8 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
             int id = Convert.ToInt32(txtId.Text);
             string nome = txtNome.Text;
             string telefone = txtTelefone.Text;
-            bool ClienteAntigo = rdbAntigo.Checked;
-            bool ClienteNovo = rdbNovo.Checked;
 
-            cliente = new Cliente(nome, telefone, ClienteAntigo, ClienteNovo);
+            cliente = new Cliente(nome, telefone);
             cliente.id = id;
 
             return cliente;
@@ -33,11 +31,6 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
             txtId.Text = clienteSelecionado.id.ToString();
             txtNome.Text = clienteSelecionado.Nome;
             txtTelefone.Text = clienteSelecionado.Telefone;
-
-            if (clienteSelecionado.ClienteAntigo)
-                rdbAntigo.Checked = true;
-            else
-                rdbNovo.Checked = true;
         }
 
         private void Validar(Cliente cliente)

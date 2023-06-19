@@ -42,13 +42,13 @@
             cmbTema = new ComboBox();
             dtpData = new DateTimePicker();
             lblHoraFinal = new Label();
-            txtCep = new TextBox();
             lblCep = new Label();
             txtNumero = new TextBox();
             lblNumero = new Label();
             dtpHoraInicio = new DateTimePicker();
             dtpHoraFinal = new DateTimePicker();
             pictureBox1 = new PictureBox();
+            txtCep = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -144,7 +144,7 @@
             // 
             // txtRua
             // 
-            txtRua.Location = new Point(105, 113);
+            txtRua.Location = new Point(105, 144);
             txtRua.Name = "txtRua";
             txtRua.Size = new Size(121, 23);
             txtRua.TabIndex = 20;
@@ -155,7 +155,7 @@
             lblRua.BackColor = Color.Transparent;
             lblRua.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             lblRua.ForeColor = Color.MidnightBlue;
-            lblRua.Location = new Point(59, 115);
+            lblRua.Location = new Point(59, 146);
             lblRua.Name = "lblRua";
             lblRua.Size = new Size(34, 17);
             lblRua.TabIndex = 19;
@@ -201,20 +201,13 @@
             lblHoraFinal.TabIndex = 25;
             lblHoraFinal.Text = "Hora Final:";
             // 
-            // txtCep
-            // 
-            txtCep.Location = new Point(105, 142);
-            txtCep.Name = "txtCep";
-            txtCep.Size = new Size(121, 23);
-            txtCep.TabIndex = 28;
-            // 
             // lblCep
             // 
             lblCep.AutoSize = true;
             lblCep.BackColor = Color.Transparent;
             lblCep.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             lblCep.ForeColor = Color.MidnightBlue;
-            lblCep.Location = new Point(58, 144);
+            lblCep.Location = new Point(58, 114);
             lblCep.Name = "lblCep";
             lblCep.Size = new Size(34, 17);
             lblCep.TabIndex = 27;
@@ -222,7 +215,7 @@
             // 
             // txtNumero
             // 
-            txtNumero.Location = new Point(105, 171);
+            txtNumero.Location = new Point(105, 173);
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(121, 23);
             txtNumero.TabIndex = 30;
@@ -233,7 +226,7 @@
             lblNumero.BackColor = Color.Transparent;
             lblNumero.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             lblNumero.ForeColor = Color.MidnightBlue;
-            lblNumero.Location = new Point(35, 173);
+            lblNumero.Location = new Point(38, 174);
             lblNumero.Name = "lblNumero";
             lblNumero.Size = new Size(61, 17);
             lblNumero.TabIndex = 29;
@@ -270,6 +263,15 @@
             pictureBox1.TabIndex = 35;
             pictureBox1.TabStop = false;
             // 
+            // txtCep
+            // 
+            txtCep.Location = new Point(105, 113);
+            txtCep.Margin = new Padding(3, 2, 3, 2);
+            txtCep.Mask = "00000-000";
+            txtCep.Name = "txtCep";
+            txtCep.Size = new Size(121, 23);
+            txtCep.TabIndex = 36;
+            // 
             // TelaAluguelForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -277,12 +279,12 @@
             BackColor = SystemColors.Control;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(581, 286);
+            Controls.Add(txtCep);
             Controls.Add(pictureBox1);
             Controls.Add(dtpHoraFinal);
             Controls.Add(dtpHoraInicio);
             Controls.Add(txtNumero);
             Controls.Add(lblNumero);
-            Controls.Add(txtCep);
             Controls.Add(lblCep);
             Controls.Add(lblHoraFinal);
             Controls.Add(dtpData);
@@ -326,12 +328,12 @@
         private ComboBox cmbTema;
         private DateTimePicker dtpData;
         private Label lblHoraFinal;
-        private TextBox txtCep;
         private Label lblCep;
         private TextBox txtNumero;
         private Label lblNumero;
         private DateTimePicker dtpHoraInicio;
         private DateTimePicker dtpHoraFinal;
         private PictureBox pictureBox1;
+        private MaskedTextBox txtCep;
     }
 }

@@ -29,6 +29,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
 
         public override string ToolTipPagamento => "Conferir informações do Pagamento";
 
+        public override bool PagamentoHabilitado => true;
 
         public override void Inserir()
         {
@@ -150,7 +151,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
             {
                 telaPagamento.PorcentagemEntrada(aluguelSelecionado);
 
-                aluguelSelecionado.ValorPagar = aluguelSelecionado.CalcularSaldo();
+                aluguelSelecionado.ValorPagar = aluguelSelecionado.CalcularValorPagar();
 
                 repositorioAluguel.AtualizarPagamentoJson(aluguelSelecionado.id, aluguelSelecionado);
 

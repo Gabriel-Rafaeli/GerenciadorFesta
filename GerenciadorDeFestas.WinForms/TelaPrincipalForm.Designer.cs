@@ -41,6 +41,8 @@
             btnExcluir = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             btnPagamento = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
+            btnListagem = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
             labelTipoCadastro = new ToolStripLabel();
             panelRegistros = new Panel();
@@ -107,7 +109,7 @@
             // 
             toolBar.BackColor = Color.Transparent;
             toolBar.Enabled = false;
-            toolBar.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, toolStripSeparator1, btnPagamento, toolStripSeparator2, labelTipoCadastro });
+            toolBar.Items.AddRange(new ToolStripItem[] { btnInserir, btnEditar, btnExcluir, toolStripSeparator1, btnPagamento, toolStripSeparator3, btnListagem, toolStripSeparator2, labelTipoCadastro });
             toolBar.Location = new Point(0, 24);
             toolBar.Name = "toolBar";
             toolBar.RenderMode = ToolStripRenderMode.System;
@@ -167,6 +169,23 @@
             btnPagamento.Size = new Size(42, 42);
             btnPagamento.Text = "toolStripButton4";
             btnPagamento.Click += btnPagamento_Click;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 45);
+            // 
+            // btnListagem
+            // 
+            btnListagem.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnListagem.Image = Properties.Resources.list_alt_FILL0_wght400_GRAD0_opsz24;
+            btnListagem.ImageScaling = ToolStripItemImageScaling.None;
+            btnListagem.ImageTransparentColor = Color.Magenta;
+            btnListagem.Name = "btnListagem";
+            btnListagem.Padding = new Padding(7);
+            btnListagem.Size = new Size(42, 42);
+            btnListagem.Text = "toolStripButton1";
+            btnListagem.Click += toolStripButton1_Click;
             // 
             // toolStripSeparator2
             // 
@@ -251,5 +270,7 @@
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel labelRodape;
         private ToolStripMenuItem TemasMenuItem;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripButton btnListagem;
     }
 }

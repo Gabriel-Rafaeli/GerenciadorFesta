@@ -30,16 +30,13 @@
         {
             btnCancelar = new Button();
             btnGravar = new Button();
-            rdbAntigo = new RadioButton();
-            rdbNovo = new RadioButton();
-            label1 = new Label();
             label2 = new Label();
             txtId = new TextBox();
             label3 = new Label();
             label4 = new Label();
             txtNome = new TextBox();
-            txtTelefone = new TextBox();
             pictureBox1 = new PictureBox();
+            txtTelefone = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -64,49 +61,12 @@
             btnGravar.UseVisualStyleBackColor = true;
             btnGravar.Click += btnGravar_Click;
             // 
-            // rdbAntigo
-            // 
-            rdbAntigo.AutoSize = true;
-            rdbAntigo.BackColor = Color.Transparent;
-            rdbAntigo.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            rdbAntigo.Location = new Point(269, 96);
-            rdbAntigo.Name = "rdbAntigo";
-            rdbAntigo.Size = new Size(67, 21);
-            rdbAntigo.TabIndex = 2;
-            rdbAntigo.TabStop = true;
-            rdbAntigo.Text = "Antigo";
-            rdbAntigo.UseVisualStyleBackColor = false;
-            // 
-            // rdbNovo
-            // 
-            rdbNovo.AutoSize = true;
-            rdbNovo.BackColor = Color.Transparent;
-            rdbNovo.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            rdbNovo.Location = new Point(200, 96);
-            rdbNovo.Name = "rdbNovo";
-            rdbNovo.Size = new Size(59, 21);
-            rdbNovo.TabIndex = 3;
-            rdbNovo.TabStop = true;
-            rdbNovo.Text = "Novo";
-            rdbNovo.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(19, 96);
-            label1.Name = "label1";
-            label1.Size = new Size(158, 17);
-            label1.TabIndex = 4;
-            label1.Text = "Escolha o tipo de cliente:";
-            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label2.Location = new Point(384, 24);
+            label2.Location = new Point(379, 37);
             label2.Name = "label2";
             label2.Size = new Size(23, 17);
             label2.TabIndex = 5;
@@ -114,7 +74,7 @@
             // 
             // txtId
             // 
-            txtId.Location = new Point(410, 21);
+            txtId.Location = new Point(405, 34);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
             txtId.Size = new Size(28, 23);
@@ -126,7 +86,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label3.Location = new Point(30, 24);
+            label3.Location = new Point(25, 37);
             label3.Name = "label3";
             label3.Size = new Size(48, 17);
             label3.TabIndex = 7;
@@ -137,7 +97,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label4.Location = new Point(19, 59);
+            label4.Location = new Point(17, 83);
             label4.Name = "label4";
             label4.Size = new Size(61, 17);
             label4.TabIndex = 8;
@@ -145,17 +105,10 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(89, 21);
+            txtNome.Location = new Point(84, 34);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(282, 23);
             txtNome.TabIndex = 9;
-            // 
-            // txtTelefone
-            // 
-            txtTelefone.Location = new Point(89, 56);
-            txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(126, 23);
-            txtTelefone.TabIndex = 10;
             // 
             // pictureBox1
             // 
@@ -168,6 +121,16 @@
             pictureBox1.TabIndex = 19;
             pictureBox1.TabStop = false;
             // 
+            // txtTelefone
+            // 
+            txtTelefone.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTelefone.Location = new Point(84, 78);
+            txtTelefone.Margin = new Padding(3, 2, 3, 2);
+            txtTelefone.Mask = "(00) 00000-0000";
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(126, 27);
+            txtTelefone.TabIndex = 20;
+            // 
             // TelaClienteForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -175,16 +138,13 @@
             BackColor = SystemColors.Control;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(456, 192);
-            Controls.Add(pictureBox1);
             Controls.Add(txtTelefone);
+            Controls.Add(pictureBox1);
             Controls.Add(txtNome);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(txtId);
             Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(rdbNovo);
-            Controls.Add(rdbAntigo);
             Controls.Add(btnGravar);
             Controls.Add(btnCancelar);
             DoubleBuffered = true;
@@ -202,15 +162,12 @@
 
         private Button btnCancelar;
         private Button btnGravar;
-        private RadioButton rdbAntigo;
-        private RadioButton rdbNovo;
-        private Label label1;
         private Label label2;
         private TextBox txtId;
         private Label label3;
         private Label label4;
         private TextBox txtNome;
-        private TextBox txtTelefone;
         private PictureBox pictureBox1;
+        private MaskedTextBox txtTelefone;
     }
 }
