@@ -71,7 +71,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloTema
 
             foreach (Tema t in listaTemas)
             {
-                if (tema.Nome == t.Nome && txtId.Text == "0")
+                if (tema.Nome.ToUpper() == t.Nome.ToUpper() && txtId.Text == "0")
                 {
                     TelaPrincipalForm.Instancia.AtualizarRodape("O nome ja esta em uso");
 

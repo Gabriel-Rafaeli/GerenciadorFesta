@@ -48,7 +48,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
 
             foreach (Cliente c in listaClientes)
             {
-                if (cliente.Nome == c.Nome && txtId.Text == "0")
+                if (cliente.Nome.ToUpper() == c.Nome.ToUpper() && txtId.Text == "0")
                 {
                     TelaPrincipalForm.Instancia.AtualizarRodape("O nome ja esta em uso");
 

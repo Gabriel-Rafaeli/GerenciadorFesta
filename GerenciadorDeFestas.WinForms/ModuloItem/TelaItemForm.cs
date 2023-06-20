@@ -5,10 +5,14 @@ namespace GerenciadorDeFestas.WinForms.ModuloItem
 {
     public partial class TelaItemForm : Form
     {
-        public TelaItemForm()
+
+        List<Item> listaItens;
+        public TelaItemForm(List<Item> listaItens)
         {
             InitializeComponent();
+            this.listaItens = listaItens;
         }
+
         public Item ObterItem()
         {
             int id = Convert.ToInt32(txtId.Text);
@@ -45,6 +49,16 @@ namespace GerenciadorDeFestas.WinForms.ModuloItem
                 TelaPrincipalForm.Instancia.AtualizarRodape(erros[0]);
 
                 DialogResult = DialogResult.None;
+            }
+
+            foreach (Item i in listaItens)
+            {
+                if (item.Nome.ToUpper() == i.Nome.ToUpper() && txtId.Text == "0")
+                {
+                    TelaPrincipalForm.Instancia.AtualizarRodape("O nome já está em uso.");
+
+                    DialogResult = DialogResult.None;
+                }
             }
         }
 

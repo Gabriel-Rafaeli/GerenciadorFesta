@@ -26,7 +26,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloItem
 
         public override void Inserir()
         {
-            TelaItemForm telaItem = new TelaItemForm();
+            TelaItemForm telaItem = new TelaItemForm(repositorioItem.SelecionarTodos());
 
             DialogResult opcaoEscolhida = telaItem.ShowDialog();
 
@@ -52,7 +52,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloItem
                 return;
             }
 
-            TelaItemForm telaItem = new TelaItemForm();
+            TelaItemForm telaItem = new TelaItemForm(repositorioItem.SelecionarTodos());
 
             telaItem.ConfigurarValoresNaTela(itemSelecionado);
 
