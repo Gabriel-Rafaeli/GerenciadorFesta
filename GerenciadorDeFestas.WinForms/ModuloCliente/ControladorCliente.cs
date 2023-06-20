@@ -20,6 +20,8 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
 
         public override string ToolTipExcluir { get { return "Excluir Cliente existente"; } }
 
+        public override string ToolTipListagem { get { return "Listar Alugueis do Cliente"; } }
+
         public override bool ListagemHabilitado => true;
 
         public override void Inserir()
@@ -97,8 +99,6 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
 
             CarregarClientes();
         }
-
-       
         
         public override void Listar()
         {

@@ -1,4 +1,5 @@
-﻿using GerenciadorDeFestas.Dominio.ModuloItem;
+﻿using GerenciadorDeFestas.Dominio.ModuloCliente;
+using GerenciadorDeFestas.Dominio.ModuloItem;
 using GerenciadorDeFestas.Dominio.ModuloTema;
 using GerenciadorDeFestas.Infra.Dados.Arquivo.ModuloItem;
 
@@ -7,10 +8,12 @@ namespace GerenciadorDeFestas.WinForms.ModuloTema
     public partial class TelaTemaForm : Form
     {
         RepositorioItemEmArquivo repositorioItem;
-
-        public TelaTemaForm(List<Item> itens)
+        List<Tema> listaTemas;
+        public TelaTemaForm(List<Item> itens, List<Tema> listaTemas)
         {
             InitializeComponent();
+
+            this.listaTemas = listaTemas;
 
             ConfigurarListaItem(itens);
         }
@@ -64,6 +67,16 @@ namespace GerenciadorDeFestas.WinForms.ModuloTema
                 TelaPrincipalForm.Instancia.AtualizarRodape(erros[0]);
 
                 DialogResult = DialogResult.None;
+            }
+
+            foreach (Tema t in listaTemas)
+            {
+                if (tema.Nome == t.Nome && txtId.Text == "0")
+                {
+                    TelaPrincipalForm.Instancia.AtualizarRodape("O nome ja esta em uso");
+
+                    DialogResult = DialogResult.None;
+                }
             }
         }
 

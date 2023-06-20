@@ -1,4 +1,5 @@
 ﻿using GerenciadorDeFestas.Dominio.Compartilhado;
+using GerenciadorDeFestas.Dominio.ModuloAluguel;
 using GerenciadorDeFestas.Dominio.ModuloItem;
 
 namespace GerenciadorDeFestas.Dominio.ModuloTema
@@ -11,11 +12,13 @@ namespace GerenciadorDeFestas.Dominio.ModuloTema
         public decimal ValorTotal { get; set; }
 
         public List<Item> listaItens;
+        public List<Aluguel> listaAlugueis;
 
         public Tema(string nome)
         {
             this.Nome = nome;
             this.listaItens = new List<Item>();
+            this.listaAlugueis = new List<Aluguel>();
         }
 
         public Tema()
@@ -33,11 +36,11 @@ namespace GerenciadorDeFestas.Dominio.ModuloTema
         {
             List<string> erros = new();
 
+            if (string.IsNullOrEmpty(Nome))
+                erros.Add("É necessário incluir o nome do Tema.");
+
             if (listaItens.Count == 0)
                 erros.Add("É necessário incluir um Item.");
-
-            else if (string.IsNullOrEmpty(Nome))
-                erros.Add("É necessário incluir o nome do Tema.");
 
             return erros.ToArray();
         }

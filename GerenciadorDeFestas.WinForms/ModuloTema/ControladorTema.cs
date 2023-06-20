@@ -1,4 +1,5 @@
-﻿using GerenciadorDeFestas.Dominio.ModuloItem;
+﻿using GerenciadorDeFestas.Dominio.ModuloCliente;
+using GerenciadorDeFestas.Dominio.ModuloItem;
 using GerenciadorDeFestas.Dominio.ModuloTema;
 using GerenciadorDeFestas.WinForms.Compartilhado;
 
@@ -26,7 +27,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloTema
 
         public override void Inserir()
         {
-            TelaTemaForm telaTema = new TelaTemaForm(repositorioItem.SelecionarTodos());
+            TelaTemaForm telaTema = new TelaTemaForm(repositorioItem.SelecionarTodos(), repositorioTema.SelecionarTodos());
 
             DialogResult opcaoEscolhida = telaTema.ShowDialog();
 
@@ -56,21 +57,24 @@ namespace GerenciadorDeFestas.WinForms.ModuloTema
                 return;
             }
 
-            TelaTemaForm telaTema = new TelaTemaForm(repositorioItem.SelecionarTodos());
+            TelaTemaForm telaTema = new TelaTemaForm(repositorioItem.SelecionarTodos(), repositorioTema.SelecionarTodos());
             telaTema.ConfigurarTela(temaSelecionado);
 
             DialogResult opcaoEscolhida = telaTema.ShowDialog();
 
             if (opcaoEscolhida == DialogResult.OK)
             {
-                Tema tema = telaTema.ObterTema();
+                if (temaSelecionado.listaAlugueis.Count() > 0)
+                {
+                    MessageBox.Show("Exclusão inválida! CTema possui aluguel(éis)", "Excluir tema existente",
+                        MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
 
-                tema.CalcularValor();
-
-                repositorioTema.Editar(tema.id, tema);
-
-                CarregarTemas();
+                repositorioTema.Excluir(temaSelecionado);
             }
+
+            CarregarTemas();
         }
 
         public override void Excluir()
@@ -92,10 +96,15 @@ namespace GerenciadorDeFestas.WinForms.ModuloTema
 
             if (opcaoEscolhida == DialogResult.OK)
             {
+                if (tema.listaAlugueis.Count() > 0)
+                {
+                    MessageBox.Show("Exclusão inválida! Tema possui aluguel(éis)", "Excluir tema existente",
+                        MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
                 repositorioTema.Excluir(tema);
-
-                CarregarTemas();
             }
+            CarregarTemas();
         }
 
         private Tema ObterTemaSelecionado()

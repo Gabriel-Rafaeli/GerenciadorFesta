@@ -6,10 +6,12 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
     public partial class TelaClienteForm : Form
     {
         private Cliente cliente;
-
-        public TelaClienteForm(List<Cliente> clientes)
+        List<Cliente> listaClientes;
+        public TelaClienteForm(List<Cliente> listaClientes)
         {
             InitializeComponent();
+
+            this.listaClientes = listaClientes;
 
             this.ConfigurarDialog();
         }
@@ -42,6 +44,16 @@ namespace GerenciadorDeFestas.WinForms.ModuloCliente
                 TelaPrincipalForm.Instancia.AtualizarRodape(erros[0]);
 
                 DialogResult = DialogResult.None;
+            }
+
+            foreach (Cliente c in listaClientes)
+            {
+                if (cliente.Nome == c.Nome && txtId.Text == "0")
+                {
+                    TelaPrincipalForm.Instancia.AtualizarRodape("O nome ja esta em uso");
+
+                    DialogResult = DialogResult.None;
+                }
             }
         }
 

@@ -12,6 +12,8 @@ namespace GerenciadorDeFestas.WinForms.Compartilhado
 
         public virtual string ToolTipPagamento { get; }
 
+        public virtual string ToolTipListagem { get; }
+
         public virtual bool InserirHabilitado { get { return true; } }
 
         public virtual bool EditarHabilitado { get { return true; } }

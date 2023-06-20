@@ -43,6 +43,7 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
                 aluguelSelecionado.CalcularValorPagar();
 
                 aluguelSelecionado.Cliente.listaAlugueisDoCliente.Add(aluguelSelecionado);
+                aluguelSelecionado.Tema.listaAlugueis.Add(aluguelSelecionado);
 
                 repositorioAluguel.Inserir(aluguelSelecionado);
             }

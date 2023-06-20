@@ -49,8 +49,6 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
                 return null;
             }
 
-            
-
             return aluguel;
         }
 

@@ -88,6 +88,7 @@ namespace GerenciadorDeFestas.WinForms
             btnEditar.ToolTipText = controlador.ToolTipEditar;
             btnExcluir.ToolTipText = controlador.ToolTipExcluir;
             btnPagamento.ToolTipText = controlador.ToolTipPagamento;
+            btnListagem.ToolTipText = controlador.ToolTipListagem;
         }
 
         private void ConfigurarBarraFerramentas(ControladorBase controlador)
