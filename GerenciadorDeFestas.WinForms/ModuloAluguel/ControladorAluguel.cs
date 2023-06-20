@@ -100,10 +100,25 @@ namespace GerenciadorDeFestas.WinForms.ModuloAluguel
 
             if (opcaoEscolhida == DialogResult.OK)
             {
-                repositorioAluguel.Excluir(aluguel);
+                for (int i = 0; i < aluguel.Cliente.listaAlugueisDoCliente.Count(); i++)
+                {
+                    if (aluguel.Cliente.listaAlugueisDoCliente[i] == aluguel)
+                    {
+                        aluguel.Cliente.listaAlugueisDoCliente.Remove(aluguel.Cliente.listaAlugueisDoCliente[i]);
+                    }
+                }
 
-                CarregarAlugueis();
+                for (int i = 0; i < aluguel.Tema.listaAlugueis.Count(); i++)
+                {
+                    if (aluguel.Tema.listaAlugueis[i] == aluguel)
+                    {
+                        aluguel.Tema.listaAlugueis.Remove(aluguel.Tema.listaAlugueis[i]);
+                    }
+                }
+
+                repositorioAluguel.Excluir(aluguel);
             }
+            CarregarAlugueis();
         }
 
         public override void Pagamento()

@@ -35,13 +35,17 @@ namespace GerenciadorDeFestas.WinForms.ModuloTema
             {
                 Tema tema = telaTema.ObterTema();
 
+                for (int i = 0; i < tema.listaItens.Count(); i++)
+                {
+                    tema.listaItens[i].listaTemas.Add(tema);
+                }
+
                 tema.CalcularValor();
 
                 repositorioTema.Inserir(tema);
-
-                CarregarTemas();
-
             }
+
+            CarregarTemas();
         }
 
         public override void Editar()
@@ -102,6 +106,12 @@ namespace GerenciadorDeFestas.WinForms.ModuloTema
                         MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return;
                 }
+
+                for (int i = 0; i < tema.listaItens.Count(); i++)
+                {
+                    tema.listaItens[i].listaTemas.Remove(tema);
+                }
+
                 repositorioTema.Excluir(tema);
             }
             CarregarTemas();

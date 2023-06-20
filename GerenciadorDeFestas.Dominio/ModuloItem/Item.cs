@@ -1,4 +1,5 @@
 ﻿using GerenciadorDeFestas.Dominio.Compartilhado;
+using GerenciadorDeFestas.Dominio.ModuloTema;
 
 namespace GerenciadorDeFestas.Dominio.ModuloItem
 {
@@ -8,10 +9,13 @@ namespace GerenciadorDeFestas.Dominio.ModuloItem
         public string Nome { get; set; }
         public decimal Valor { get; set; }
 
+        public List<Tema> listaTemas;
+
         public Item(string nome, decimal valor)
         {
             this.Nome = nome;
             this.Valor = valor;
+            listaTemas = new List<Tema>();
         }
         public Item()
         {

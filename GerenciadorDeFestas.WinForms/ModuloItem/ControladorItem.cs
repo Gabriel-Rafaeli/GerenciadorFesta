@@ -80,14 +80,21 @@ namespace GerenciadorDeFestas.WinForms.ModuloItem
             }
 
             DialogResult opcaoEscolhida = MessageBox.Show($"Deseja excluir o item {itemSelecionado.Nome}?",
-             "Exclusão de Categoria", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+             "Exclusão de Item", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
             if (opcaoEscolhida == DialogResult.OK)
             {
-                repositorioItem.Excluir(itemSelecionado);
+                if (itemSelecionado.listaTemas.Count() > 0)
+                {
+                    MessageBox.Show("Exclusão inválida! Item está em um tema(s)", "Excluir item existente",
+                        MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
 
-                CarregarItens();
+                repositorioItem.Excluir(itemSelecionado);
             }
+
+            CarregarItens();
         }
 
         private void CarregarItens()
